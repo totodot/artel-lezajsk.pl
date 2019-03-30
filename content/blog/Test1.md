@@ -2,7 +2,7 @@
 path: /blog/test
 date: 2019-03-30T08:04:48.881Z
 title: dsadsadsaddsadas
-thumbnail: /assets/1.png
+thumbnail: /assets/icon.png
 id: "12"
 ---
 
