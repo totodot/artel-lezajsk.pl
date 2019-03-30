@@ -4,7 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+// You can delete this file if you're not using
+const path = require("path")
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const products = await graphql(`
@@ -57,4 +58,31 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       }, // additional data can be passed via context
     })
   })
+}
+
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  const { frontmatter } = node
+  if (frontmatter) {
+    const { thumbnail } = frontmatter
+    if (thumbnail) {
+      if (thumbnail.indexOf("/assets") === 0) {
+        console.log(thumbnail)
+        frontmatter.thumbnail = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, "/static/", thumbnail)
+        )
+        console.log(frontmatter)
+      }
+    }
+  }
+
+  // if (node.internal.type === `MarkdownRemark`) {
+  //   const value = createFilePath({ node, getNode })
+  //   createNodeField({
+  //     name: `slug`,
+  //     node,
+  //     value,
+  //   })
+  // }
 }
