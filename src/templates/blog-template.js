@@ -11,18 +11,23 @@ export default function Template({
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <Image
+        {/* <Image
           fluid={frontmatter.thumbnail.childImageSharp.fluid}
           alt="dsadasd"
         />
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h2>{frontmatter.date}</h2> */}
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
         <Image
           fluid={frontmatter.thumbnail.childImageSharp.fluid}
+          alt="dsadasd"
+        />
+
+        <Image
+          fluid={placeholderImage.childImageSharp.fluid}
           alt="dsadasd"
         />
       </div>
@@ -40,7 +45,7 @@ export const pageQuery = graphql`
         title
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 10) {
               ...GatsbyImageSharpFluid
             }
           }
