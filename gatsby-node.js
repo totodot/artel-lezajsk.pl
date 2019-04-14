@@ -50,6 +50,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
   })
   blog.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    console.log(node);
     createPage({
       path: `/posts/${node.frontmatter.id}/`,
       component: require.resolve("./src/templates/blog-template.js"),
