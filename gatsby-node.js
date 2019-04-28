@@ -50,6 +50,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
   })
   blog.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    console.log('dsadasd')
     console.log(node);
     createPage({
       path: `/posts/${node.frontmatter.id}/`,
@@ -68,12 +69,10 @@ exports.onCreateNode = ({ node, actions }) => {
     const { thumbnail } = frontmatter
     if (thumbnail) {
       if (thumbnail.indexOf("/assets") === 0) {
-        console.log(thumbnail)
         frontmatter.thumbnail = path.relative(
           path.dirname(node.fileAbsolutePath),
           path.join(__dirname, "/static/", thumbnail)
         )
-        console.log(frontmatter)
       }
     }
   }
