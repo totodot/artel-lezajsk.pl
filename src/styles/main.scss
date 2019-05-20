@@ -1,1 +1,20 @@
 @import "./grid.css";
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./header.scss";
+@import "./nav.scss";
+
+html{
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Tahoma, sans-serif;
+  letter-spacing: 0.4px;
+
+  .wf-active & {
+    font-family: "Raleway";
+    letter-spacing: unset;
+  }
+}
