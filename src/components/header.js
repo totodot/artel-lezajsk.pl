@@ -1,39 +1,38 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const Header = ({ siteTitle }) => {
   const menuLinks = [
     {
-      name: "o nas",
-      link: "",
+      name: 'o nas',
+      link: '',
     },
     {
-      name: "aktualności",
-      link: "",
+      name: 'aktualności',
+      link: '',
     },
     {
-      name: "dlaczego my?",
-      link: "",
+      name: 'dlaczego my?',
+      link: '',
     },
     {
-      name: "oferta",
-      link: "",
+      name: 'oferta',
+      link: '',
     },
     {
-      name: "kontakt",
-      link: "",
+      name: 'kontakt',
+      link: '',
     },
-  ]
+  ];
   return (
-    <header class="header">
+    <header className="header">
       <div className="container header__container">
-        <div className="header__logo" />
+        <div className="header__logo">{{ siteTitle }}</div>
         <nav className="nav">
           <ul className="nav__list">
-            {menuLinks.map(({ name, link }) => (
+            {menuLinks.map(({ name }) => (
               <li className="nav__item">
-                <a className="nav__link" href="">
+                <a href="/" className="nav__link">
                   {name}
                 </a>
               </li>
@@ -42,15 +41,15 @@ const Header = ({ siteTitle }) => {
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: '',
+};
 
-export default Header
+export default Header;
