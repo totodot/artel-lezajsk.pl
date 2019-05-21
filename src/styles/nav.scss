@@ -9,12 +9,8 @@
     color: $color-white;
     text-transform: uppercase;
     padding: 20px;
-    transition: font-weight 0.1s;
-    &:hover,
-    &:focus {
-        font-weight: 600;
-    }
-
+    transition: opacity 0.2s;
+    
     &::before {
       content: "";
       position: absolute;
@@ -27,8 +23,9 @@
       transition: transform 0.1s;
     }
 
+    &:hover,
+    &:focus,
     &_active {
-      font-weight: 600;
       &::before {
         transform: scale3d(1, 1, 1);
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

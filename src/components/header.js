@@ -1,40 +1,45 @@
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import React from 'react';
+import Hamburger from './header/hamburger';
 
 const Header = ({ siteTitle }) => {
   const menuLinks = [
     {
       name: 'o nas',
-      link: '',
+      link: '/about',
     },
     {
       name: 'aktualności',
-      link: '',
+      link: '/news',
     },
     {
       name: 'dlaczego my?',
-      link: '',
+      link: '/whyus',
     },
     {
       name: 'oferta',
-      link: '',
+      link: '/offer',
     },
     {
       name: 'kontakt',
-      link: '',
+      link: '/contact',
     },
   ];
   return (
     <header className="header">
       <div className="container header__container">
-        <div className="header__logo">{{ siteTitle }}</div>
+        <div className="header__hamburger">
+          <Hamburger />
+        </div>
+        <div className="header__logo">{siteTitle}</div>
         <nav className="nav">
           <ul className="nav__list">
-            {menuLinks.map(({ name }) => (
+            {menuLinks.map(({ name, link }) => (
               <li className="nav__item">
-                <a href="/" className="nav__link">
+                <Link to={link} className="nav__link" activeClassName="nav__link_active">
                   {name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
