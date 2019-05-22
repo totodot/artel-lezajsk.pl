@@ -1,9 +1,15 @@
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import React from 'react';
+import cx from 'classnames';
+
 import Hamburger from './header/hamburger';
 
 const Header = ({ siteTitle }) => {
+  const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+  const toogleHamburger = () => {
+    setHamburgerOpen(!isHamburgerOpen);
+  };
   const menuLinks = [
     {
       name: 'o nas',
@@ -27,25 +33,40 @@ const Header = ({ siteTitle }) => {
     },
   ];
   return (
-    <header className="header">
-      <div className="container header__container">
-        <div className="header__hamburger">
-          <Hamburger />
+    <>
+      <header className="header">
+        <div className="container header__container">
+          <div className="header__hamburger">
+            <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
+          </div>
+          <div className="header__logo">{siteTitle}</div>
+          <div className="header__nav">
+            <nav className="nav">
+              <ul className="nav__list">
+                {menuLinks.map(({ name, link }) => (
+                  <li className="nav__item">
+                    <Link to={link} className="nav__link" activeClassName="nav__link_active">
+                      {name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div className="header__logo">{siteTitle}</div>
-        <nav className="nav">
-          <ul className="nav__list">
-            {menuLinks.map(({ name, link }) => (
-              <li className="nav__item">
-                <Link to={link} className="nav__link" activeClassName="nav__link_active">
-                  {name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
+      <nav className={cx('mobile-nav', { 'mobile-nav_active': isHamburgerOpen })}>
+        <ul className="mobile-nav__list">
+          {menuLinks.map(({ name, link }) => (
+            <li className="mobile-nav__item">
+              <Link to={link} className="mobile-nav__link" activeClassName="nav__link_active">
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 };
 
