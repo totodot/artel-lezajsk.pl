@@ -1,42 +1,86 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import cx from 'classnames';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import logo from '../images/logo.png';
+import Hamburger from './header/hamburger';
+
+const Header = ({ siteTitle }) => {
+  const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+  const toogleHamburger = () => {
+    setHamburgerOpen(!isHamburgerOpen);
+  };
+  const menuLinks = [
+    {
+      name: 'o nas',
+      link: '/about',
+    },
+    {
+      name: 'aktualności',
+      link: '/news',
+    },
+    {
+      name: 'dlaczego my?',
+      link: '/whyus',
+    },
+    {
+      name: 'oferta',
+      link: '/offer',
+    },
+    {
+      name: 'kontakt',
+      link: '/contact',
+    },
+  ];
+  return (
+    <>
+      <header className="header">
+        <div className="container header__container">
+          <div className="header__wrapper">
+            <div className="header__hamburger">
+              <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
+            </div>
+            <div className="header__logo">
+              <img src={logo} alt="Logo" />
+            </div>
+            <div className="header__nav">
+              <nav className="nav">
+                <ul className="nav__list">
+                  {menuLinks.map(({ name, link }) => (
+                    <li className="nav__item">
+                      <Link to={link} className="nav__link" activeClassName="nav__link_active">
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav className={cx('mobile-nav', { 'mobile-nav_active': isHamburgerOpen })}>
+        <ul className="mobile-nav__list">
+          {menuLinks.map(({ name, link }) => (
+            <li className="mobile-nav__item">
+              <Link to={link} className="mobile-nav__link" activeClassName="nav__link_active">
+                {name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: '',
+};
 
-export default Header
+export default Header;

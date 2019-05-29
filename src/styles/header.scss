@@ -1,0 +1,93 @@
+.header {
+  background: $color-main;
+  width: 100%;
+  height: $header-height-mobile;
+  @media (min-width: $md) {
+    height:  $header-height-desktop;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    @media (min-width: $md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__hamburger {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @media (min-width: $md) {
+      display: block;
+    }
+  }
+}
+
+.mobile-nav {
+  $self: &;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  background: $color-secondary;
+
+  @media (min-width: $md) {
+    display: none;
+  }
+
+  &_active {
+    height: 150px;
+    opacity: 1;
+
+    #{ $self }__item {
+      transform: translateX(0);
+      opacity: 1;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  &__item {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: none;
+  }
+  @for $i from 1 through 10 {
+    &__item:nth-child(#{$i}n) {
+      transition-delay: #{0.1 + $i * 0.1}s;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px;
+    transition: opacity 0.2s;
+    text-align: center;
+  }
+}
