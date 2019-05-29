@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import cx from 'classnames';
 
+import logo from '../images/logo.png';
 import Hamburger from './header/hamburger';
 
 const Header = ({ siteTitle }) => {
@@ -36,22 +37,26 @@ const Header = ({ siteTitle }) => {
     <>
       <header className="header">
         <div className="container header__container">
-          <div className="header__hamburger">
-            <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
-          </div>
-          <div className="header__logo">{siteTitle}</div>
-          <div className="header__nav">
-            <nav className="nav">
-              <ul className="nav__list">
-                {menuLinks.map(({ name, link }) => (
-                  <li className="nav__item">
-                    <Link to={link} className="nav__link" activeClassName="nav__link_active">
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+          <div className="header__wrapper">
+            <div className="header__hamburger">
+              <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
+            </div>
+            <div className="header__logo">
+              <img src={logo} alt="Logo" />
+            </div>
+            <div className="header__nav">
+              <nav className="nav">
+                <ul className="nav__list">
+                  {menuLinks.map(({ name, link }) => (
+                    <li className="nav__item">
+                      <Link to={link} className="nav__link" activeClassName="nav__link_active">
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </header>

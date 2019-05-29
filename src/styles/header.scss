@@ -1,29 +1,42 @@
 .header {
   background: $color-main;
   width: 100%;
-  height: $header-hieght-mobile;
-  @media (min-width: $sm) {
-    height: $header-hieght-desktop;
+  height: $header-height-mobile;
+  @media (min-width: $md) {
+    height:  $header-height-desktop;
   }
 
   &__container {
     width: 100%;
     height: 100%;
+  }
+
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    height: 100%;
+    position: relative;
+
+    @media (min-width: $md) {
+      justify-content: space-between;
+    }
   }
 
   &__hamburger {
-    display: block;
-    @media (min-width: $sm) {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    @media (min-width: $md) {
       display: none;
     }
   }
 
   &__nav {
     display: none;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       display: block;
     }
   }
@@ -39,9 +52,9 @@
   align-items: center;
   opacity: 0;
   transition: height 0.3s ease, opacity 0.3s ease;
-  background: red;
+  background: $color-secondary;
 
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     display: none;
   }
 
