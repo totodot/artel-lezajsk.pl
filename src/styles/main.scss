@@ -4,8 +4,9 @@
 @import "./header.scss";
 @import "./nav.scss";
 @import "./hamburger.scss";
+@import "./footer.scss";
 
-html{
+html {
   font-size: 10px;
 }
 
@@ -17,5 +18,19 @@ body {
   .wf-active & {
     font-family: "Raleway";
     letter-spacing: unset;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__main {
+    flex: 1 0 auto;
+  }
+
+  &__footer {
+    flex-shrink: 0;
   }
 }

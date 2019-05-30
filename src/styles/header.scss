@@ -3,7 +3,7 @@
   width: 100%;
   height: $header-height-mobile;
   @media (min-width: $md) {
-    height:  $header-height-desktop;
+    height: $header-height-desktop;
   }
 
   &__container {
@@ -20,6 +20,15 @@
 
     @media (min-width: $md) {
       justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    width: 110px;
+    line-height: 0;
+
+    @media (min-width: $md) {
+      width: 150px;
     }
   }
 

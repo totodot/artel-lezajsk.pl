@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import cx from 'classnames';
 
-import logo from '../images/logo.png';
+import Logo from '../images/logo.inline.svg';
 import Hamburger from './header/hamburger';
 
 const Header = ({ siteTitle }) => {
@@ -42,7 +42,7 @@ const Header = ({ siteTitle }) => {
               <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
             </div>
             <div className="header__logo">
-              <img src={logo} alt="Logo" />
+              <Logo />
             </div>
             <div className="header__nav">
               <nav className="nav">
