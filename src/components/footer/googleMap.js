@@ -3,13 +3,19 @@ import React from 'react';
 import {
   GoogleMap, Marker, withGoogleMap, withScriptjs,
 } from 'react-google-maps';
-import logoMark from '../../images/logo-mark.svg';
+import mapPin from '../../images/map-pin.png';
+
+const iconOptions = {
+  url: mapPin,
+};
+
+const position = { lat: 50.253100, lng: 22.421230 };
 
 const Map = withScriptjs(
   withGoogleMap(() => (
     <div>
-      <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-        <Marker icon={logoMark} position={{ lat: -34.397, lng: 150.644 }} />
+      <GoogleMap defaultZoom={17} defaultCenter={position}>
+        <Marker icon={iconOptions} position={position} />
       </GoogleMap>
     </div>
   )),
