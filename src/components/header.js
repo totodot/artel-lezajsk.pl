@@ -48,7 +48,7 @@ const Header = ({ siteTitle }) => {
               <nav className="nav">
                 <ul className="nav__list">
                   {menuLinks.map(({ name, link }) => (
-                    <li className="nav__item">
+                    <li className="nav__item" key={link}>
                       <Link to={link} className="nav__link" activeClassName="nav__link_active">
                         {name}
                       </Link>
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => {
       <nav className={cx('mobile-nav', { 'mobile-nav_active': isHamburgerOpen })}>
         <ul className="mobile-nav__list">
           {menuLinks.map(({ name, link }) => (
-            <li className="mobile-nav__item">
+            <li className="mobile-nav__item" key={link}>
               <Link to={link} className="mobile-nav__link" activeClassName="nav__link_active">
                 {name}
               </Link>
