@@ -1,3 +1,5 @@
+$map-height-sm: 250px;
+
 .footer {
   font-size: 1.8rem;
   position: relative;
@@ -9,8 +11,10 @@
     padding: 70px 0 90px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 250px;
     @media (min-width: $md) {
       display: block;
+      margin-bottom: 0;
       padding: 100px 20px 130px 20px;
     }
   }
@@ -44,16 +48,17 @@
   }
 
   &__map-col {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     @media (min-width: $md) {
-      position: absolute;
       top: 0;
       left: 50%;
-      right: 0;
-      bottom: 0;
     }
   }
   &__map-container {
-    height: 250px;
+    height: $map-height-sm;
 
     @media (min-width: $md) {
       height: 100%;
