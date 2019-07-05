@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+.why-box {
+  padding: 10px;
+
+  &__circle {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    background: $color-white;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__icon {
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    svg {
+      fill: $color-main;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 2em;
+    font-weight: 600;
+    text-align: center;
+  }
+}

@@ -35,3 +35,9 @@ body {
     flex-shrink: 0;
   }
 }
+
+.section {
+  &_dark {
+    background: $color-tertiary;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../styles/variables.scss";
+.news-box {
+  height: 450px;
+  &__top {
+    height: 50%;
+    padding: 1em;
+    background: $color-secondary;
+  }
+
+  &__bottom {
+    height: 50%;
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
