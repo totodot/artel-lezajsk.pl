@@ -13,4 +13,5 @@ const NewsBox = () => (
     </div>
   </div>
 );
+
 export default NewsBox;
