@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
       <Banner />
 
-      <section className="section_dark">
+      <section className="section section_dark">
         <div className="container">
           <h1>Hi people</h1>
           <p>Welcome to your new Gatsby site.</p>
@@ -30,20 +30,24 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      <section>
+      <section className="section">
         <div className="container">
+          <h2>Aktualności</h2>
           <div className="row">
             {articles.edges.map(({ node }) => (
               <div className="col">
-                <Link to={node.fields.slug}>
-                  <NewsBox />
-                </Link>
+                <NewsBox
+                  link={node.fields.slug}
+                  title={node.frontmatter.title}
+                  date={node.frontmatter.date}
+                  fluidImage={node.frontmatter.image.childImageSharp.fluid}
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
-      <section className="section_dark">
+      <section className="section section_dark">
         <div className="container">
           <h2>Dlaczego my?</h2>
           <div className="row">
@@ -68,7 +72,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexQuery {
     articles: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___date] }
       limit: 3
       filter: {
         frontmatter: { published: { eq: true } },
@@ -83,13 +87,20 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD.MM.YYYY")
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
     blogs: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___date] }
       filter: {fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"}}
     ) {
       edges {
@@ -100,7 +111,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD.MMMM.YYYY")
           }
         }
       }

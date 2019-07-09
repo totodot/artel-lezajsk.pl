@@ -14,12 +14,22 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Tahoma, sans-serif;
+  color: #2b3345;
   letter-spacing: 0.4px;
 
   .wf-active & {
     font-family: "Raleway";
     letter-spacing: unset;
   }
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
 }
 
 .app {
@@ -37,6 +47,7 @@ body {
 }
 
 .section {
+  padding: 2em 0;
   &_dark {
     background: $color-tertiary;
   }
