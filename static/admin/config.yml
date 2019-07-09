@@ -19,7 +19,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { name: published, label: Published, widget: "boolean", default: true }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { label: image, name: image, widget: image }
       - { name: body, label: Body, widget: markdown }
