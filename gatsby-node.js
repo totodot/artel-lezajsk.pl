@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using
 const path = require('path');
+const fsMiddlewareAPI = require('netlify-cms-backend-fs/dist/fs');
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const products = await graphql(`
@@ -80,4 +81,7 @@ exports.onCreateNode = ({ node, actions }) => {
   //     value,
   //   })
   // }
+};
+exports.onCreateDevServer = ({ app }) => {
+  fsMiddlewareAPI(app);
 };
