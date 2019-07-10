@@ -22,7 +22,7 @@ const WhyBox = React.memo(({ text, name }) => {
         </div>
       </div>
       <div className="why-box__text">
-        <h3>{text}</h3>
+        <h3 className="heading_h3">{text}</h3>
       </div>
     </div>
   );

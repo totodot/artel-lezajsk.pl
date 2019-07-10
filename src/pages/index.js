@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
 
       <section className="section">
         <div className="container">
-          <h2>Aktualności</h2>
+          <h2 className="heading_h2">Aktualności</h2>
           <div className="row">
             {articles.edges.map(({ node }) => (
               <div className="col">
@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="section section_dark">
         <div className="container">
-          <h2>Dlaczego my?</h2>
+          <h2 className="heading_h2">Dlaczego my?</h2>
           <div className="row">
             {whyBoxes.map(box => (
               <div className="col-md-4">

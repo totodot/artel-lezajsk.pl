@@ -9,7 +9,7 @@ const Articles = ({ data: { articles } }) => (
     <SEO title="Aktualności " />
     <section className="section">
       <div className="container">
-        <h2>Aktualności</h2>
+        <h1 className="heading_h2">Aktualności</h1>
         <div className="row">
           {articles.edges.map(({ node }) => (
             <div className="col-md-4">

@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => {
       link: '/articles',
     },
     {
-      name: 'dlaczego my?',
-      link: '/whyus',
+      name: 'galeria',
+      link: '/gallery',
     },
     {
       name: 'oferta',
