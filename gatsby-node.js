@@ -58,9 +58,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   fmImagesToRelative(node);
   if (node.internal.type === 'MarkdownRemark') {
-    const value = decodeURI(createFilePath({ node, getNode }))
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+    const value = createFilePath({ node, getNode });
     const template = value.split('/')[1];
     createNodeField({
       name: 'slug',

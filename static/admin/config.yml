@@ -1,6 +1,11 @@
 media_folder: static/assets
 public_folder: /assets
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
+
 collections:
   - name: blog
     label: Blog
@@ -23,3 +28,12 @@ collections:
       - { name: title, label: Title }
       - { label: image, name: image, widget: image }
       - { name: body, label: Body, widget: markdown }
+  - name: pages
+    label: Pages
+    files:
+      - file: content/about/index.md
+        label: About
+        name: about
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }

@@ -16,7 +16,7 @@ const NewsBox = ({
     <div className="news-box">
       <div className="news-box__top">
         <div className="news-box__date">{date}</div>
-        <h3 className="news-box__title">{title}</h3>
+        <h3 className="heading_h3 news-box__title">{title}</h3>
       </div>
       <div className="news-box__bottom">
         <Image fluid={fluidImage} alt={title} />
