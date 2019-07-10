@@ -19,7 +19,7 @@ const NewsBox = ({
         <h3 className="heading_h3 news-box__title">{title}</h3>
       </div>
       <div className="news-box__bottom">
-        <Image fluid={fluidImage} alt={title} />
+        {fluidImage && <Image fluid={fluidImage} alt={title} />}
       </div>
       <div className="news-box__circle">
         <ArrowRightIcon />
