@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+$strokeKey: "stroke";
+$fillKey: "fill";
+$separator: "-";
+$hues: ("base", "100", "400");
+
+$colors: (
+  base: $color-main,
+  "400": $color-main-400,
+  "100": $color-main-100,
+);
+
+@each $hue in $hues {
+  .#{$strokeKey}#{$separator}#{$hue} {
+    stroke: map-get($colors, $hue);
+  }
+  .#{$fillKey}#{$separator}#{$hue} {
+    fill: map-get($colors, $hue);
+  }
+}
