@@ -26,7 +26,6 @@ const whyBoxes = [
 
 const IndexPage = ({ data }) => {
   const { articles } = data;
-  console.log(articles);
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />

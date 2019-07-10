@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import ArrowRightIcon from '../../images/icons/arrow-right.inline.svg';
 
 import ImgBulb from '../../images/bulb.png';
 
@@ -15,14 +16,14 @@ const NewsBox = ({
     <div className="news-box">
       <div className="news-box__top">
         <div className="news-box__date">{date}</div>
-        <div className="news-box__title">
-          <h3>{title}</h3>
-        </div>
+        <h3 className="news-box__title">{title}</h3>
       </div>
       <div className="news-box__bottom">
         <Image fluid={fluidImage} alt={title} />
       </div>
-      <div className="news-box__circle" />
+      <div className="news-box__circle">
+        <ArrowRightIcon />
+      </div>
     </div>
   </Link>
 );

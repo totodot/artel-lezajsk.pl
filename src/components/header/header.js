@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
     },
     {
       name: 'aktualności',
-      link: '/news',
+      link: '/articles',
     },
     {
       name: 'dlaczego my?',
