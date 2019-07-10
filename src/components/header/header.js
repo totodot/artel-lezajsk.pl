@@ -42,7 +42,9 @@ const Header = ({ siteTitle }) => {
               <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
             </div>
             <div className="header__logo">
-              <Logo />
+              <Link to="/">
+                <Logo />
+              </Link>
             </div>
             <div className="header__nav">
               <nav className="nav">

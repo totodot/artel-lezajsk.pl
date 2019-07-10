@@ -9,6 +9,21 @@ import Banner from '../components/banner/banner';
 import NewsBox from '../components/newsBox/newsBox';
 import WhyBox from '../components/whyBox/whyBox';
 
+const whyBoxes = [
+  {
+    name: 'mountain',
+    text: 'Ponad 25 letnie  doświadczenie w branży',
+  },
+  {
+    name: 'bulb',
+    text: 'Duży wybór oświetlenia',
+  },
+  {
+    name: 'home',
+    text: 'Szeroki wybór materiałów elektrycznych',
+  },
+];
+
 const IndexPage = ({ data }) => {
   const { articles } = data;
   console.log(articles);
@@ -51,15 +66,11 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <h2>Dlaczego my?</h2>
           <div className="row">
-            <div className="col-md-4">
-              <WhyBox />
-            </div>
-            <div className="col-md-4">
-              <WhyBox />
-            </div>
-            <div className="col-md-4">
-              <WhyBox />
-            </div>
+            {whyBoxes.map(box => (
+              <div className="col-md-4">
+                <WhyBox {...box} key={box.name} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,8 @@
 @import "../../styles/variables.scss";
 .why-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 
   &__circle {
@@ -7,6 +10,7 @@
     width: 100%;
     border-radius: 50%;
     background: $color-white;
+    margin-bottom: 2em;
 
     &::before {
       content: "";
@@ -31,8 +35,10 @@
   }
 
   &__text {
-    margin-top: 2em;
-    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     text-align: center;
   }
 }
