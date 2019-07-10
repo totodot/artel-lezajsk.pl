@@ -2,7 +2,7 @@
 path: /blog/test
 date: 2019-03-30T08:04:48.881Z
 title: dsadsadsaddsadas
-thumbnail: /assets/icon.png
+thumbnail: /assets/michael-browning-227688-unsplash.jpg
 id: "1"
 ---
 
@@ -11,12 +11,13 @@ dsadsad
 
 ![](/assets/icon.png)
 
- _Photo by [Mikael Cho](https://unsplash.com/@mikael)
+_Photo by [Mikael Cho](https://unsplash.com/@mikael)
 via [Unsplash](https://unsplash.com/@mikael?photo=_3TDkAttcaM)_
 
 ![Image of Yaktocat](/assets/icon.png)
 Test1
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
 <!-- !\\[Image of Yaktocat](/assets/1.png)
 Test1
 !\\[Image of Yaktocat](https://octodex.github.com/images/yaktocat.png) -->

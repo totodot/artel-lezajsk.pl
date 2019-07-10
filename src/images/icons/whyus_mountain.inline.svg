@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      #whyus-icon-mountain .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+
+  <g id="whyus-icon-mountain">
+    <polygon
+      class="cls-1 fill-100"
+      points="6.08 49 20 24 27 24 31 15 33 15 44 38 47 38 53.65 54.19 47.91 58.61 41.54 61.5 34.5 63 26.23 62.46 20.85 60.93 15.67 58.35 11.45 55.21 7.5 51.63 6.08 49"
+    />
+    <polyline
+      class="cls-2 stroke-base"
+      points="52 49 47 38 44 38 33 15 31 15 27 24 20 24 8 46"
+    />
+    <polyline
+      class="cls-2 stroke-base"
+      points="59 36 56 30 51 30 48 24 46 24 41 32"
+    />
+    <line class="cls-2 stroke-base" x1="32" x2="32" y2="15" />
+    <polygon class="cls-2 stroke-base" points="43 7 32 7 32 1 43 1 42 4 43 7" />
+    <path class="cls-2 stroke-base" d="M10.08,10.08A31,31,0,1,0,63,32" />
+    <path class="cls-2 stroke-base" d="M32,58a25.88,25.88,0,0,1-18.38-7.62" />
+    <line class="cls-2 stroke-base" x1="32" y1="23" x2="32" y2="25" />
+    <line class="cls-2 stroke-base" x1="32" y1="27" x2="32" y2="29" />
+    <line class="cls-2 stroke-base" x1="32" y1="31" x2="32" y2="33" />
+    <path
+      class="cls-2 stroke-base"
+      d="M60,19H57a2,2,0,0,0-4,0,4,4,0,0,0-8,0H42"
+    />
+    <line class="cls-2 stroke-base" x1="62" y1="19" x2="64" y2="19" />
+    <line class="cls-2 stroke-base" x1="25" y1="15" x2="18" y2="15" />
+    <line class="cls-2 stroke-base" x1="14" y1="15" x2="16" y2="15" />
+  </g>
+</svg>

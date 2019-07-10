@@ -1,28 +1,130 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { Link, graphql } from 'gatsby';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Strona główna" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-3/">Go to page 3</Link>
+import Layout from '../components/layout';
+import Image from '../components/image';
+import SEO from '../components/seo';
+import Banner from '../components/banner/banner';
+import NewsBox from '../components/newsBox/newsBox';
+import WhyBox from '../components/whyBox/whyBox';
 
-    <div className="container">
-      <div className="row">
-        <div className="col-6">dsad</div>
-        <div className="col-6">dsad</div>
-      </div>
-    </div>
-  </Layout>
-)
+const whyBoxes = [
+  {
+    name: 'mountain',
+    text: 'Ponad 25 letnie  doświadczenie w branży',
+  },
+  {
+    name: 'bulb',
+    text: 'Duży wybór oświetlenia',
+  },
+  {
+    name: 'home',
+    text: 'Szeroki wybór materiałów elektrycznych',
+  },
+];
 
-export default IndexPage
+const IndexPage = ({ data }) => {
+  const { articles } = data;
+  return (
+    <Layout>
+      <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
+      <Banner />
+
+      <section className="section section_dark">
+        <div className="container">
+          <h1>Hi people</h1>
+          <p>Welcome to your new Gatsby site.</p>
+          <p>Now go build something great.</p>
+          <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
+            <Image />
+          </div>
+
+          <Link to="/page-3/">Go to page 3</Link>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className="heading_h2">Aktualności</h2>
+          <div className="row">
+            {articles.edges.map(({ node }) => (
+              <div className="col">
+                <NewsBox
+                  link={node.fields.slug}
+                  title={node.frontmatter.title}
+                  date={node.frontmatter.date}
+                  fluidImage={node.frontmatter.image.childImageSharp.fluid}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section section_dark">
+        <div className="container">
+          <h2 className="heading_h2">Dlaczego my?</h2>
+          <div className="row">
+            {whyBoxes.map(box => (
+              <div className="col-md-4">
+                <WhyBox {...box} key={box.name} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default IndexPage;
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    articles: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 3
+      filter: {
+        frontmatter: { published: { eq: true } },
+        fileAbsolutePath: {regex: "/(articles)/.*\\.md$/"}
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "DD.MM.YYYY")
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    blogs: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"}}
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "DD.MMMM.YYYY")
+          }
+        }
+      }
+    }
+  }
+`;

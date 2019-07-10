@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+.why-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+
+  &__circle {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    background: $color-white;
+    margin-bottom: 2em;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__icon {
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+  }
+}

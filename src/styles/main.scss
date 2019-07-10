@@ -1,5 +1,6 @@
 @import "./grid.css";
 @import "./spacing.scss";
+@import "./svg-colors.scss";
 @import "./reset.scss";
 @import "./variables.scss";
 @import "./header.scss";
@@ -14,11 +15,24 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Tahoma, sans-serif;
+  color: #2b3345;
   letter-spacing: 0.4px;
 
   .wf-active & {
     font-family: "Raleway";
     letter-spacing: unset;
+  }
+}
+
+.heading {
+  &_h2 {
+    font-size: 3.6rem;
+    margin-bottom: 1.5em;
+  }
+
+  &_h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
   }
 }
 
@@ -33,5 +47,12 @@ body {
 
   &__footer {
     flex-shrink: 0;
+  }
+}
+
+.section {
+  padding: 5em 0 10em 0;
+  &_dark {
+    background: $color-tertiary;
   }
 }

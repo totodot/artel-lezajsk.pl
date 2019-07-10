@@ -1,14 +1,12 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  console.log(data)
-  const { markdownRemark, placeholderImage } = data // data.markdownRemark holds our post data
-  const { frontmatter, html, thumbnail } = markdownRemark
-  console.log(markdownRemark);
+export default function Template({ data }) {
+  console.log(data);
+  const { markdownRemark, placeholderImage } = data; // data.markdownRemark holds our post data
+  const { frontmatter, html, thumbnail } = markdownRemark;
+
   return (
     <div className="blog-post-container">
       <div className="blog-post">
@@ -18,27 +16,22 @@ export default function Template({
         />
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2> */}
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        <Image
-          fluid={frontmatter.thumbnail.childImageSharp.fluid}
-          alt="dsadasd"
-        />
+        <p>Thumbnail</p>
+        <Image fluid={frontmatter.thumbnail.childImageSharp.fluid} alt="dsadasd" />
+        <p>Thumbnail end</p>
 
-        <Image
-          fluid={placeholderImage.childImageSharp.fluid}
-          alt="dsadasd"
-        />
+        <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: html }} />
+
+        <Image fluid={placeholderImage.childImageSharp.fluid} alt="dsadasd" />
       </div>
     </div>
-  )
+  );
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
-    markdownRemark(frontmatter: { id: { eq: $id } }) {
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
@@ -46,7 +39,7 @@ export const pageQuery = graphql`
         title
         thumbnail {
           childImageSharp {
-            fluid(maxWidth: 10) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -61,4 +54,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

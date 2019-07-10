@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page 3" />
-    <h2>page3</h2>
+    <h2 className="heading_h2">page3</h2>
   </Layout>
-)
+);
 
-export default SecondPage
+export default SecondPage;
