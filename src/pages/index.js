@@ -25,7 +25,8 @@ const whyBoxes = [
 ];
 
 const IndexPage = ({ data }) => {
-  const { articles } = data;
+  const { news } = data;
+  console.log(data);
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
@@ -39,8 +40,6 @@ const IndexPage = ({ data }) => {
           <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
             <Image />
           </div>
-
-          <Link to="/page-3/">Go to page 3</Link>
         </div>
       </section>
 
@@ -48,7 +47,7 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <h2 className="heading_h2">Aktualności</h2>
           <div className="row">
-            {articles.edges.map(({ node }) => (
+            {news.edges.map(({ node }) => (
               <div className="col">
                 <NewsBox
                   link={node.fields.slug}
@@ -83,12 +82,12 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    articles: allMarkdownRemark(
+    news: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 3
       filter: {
         frontmatter: { published: { eq: true } },
-        fileAbsolutePath: {regex: "/(articles)/.*\\.md$/"}
+        fileAbsolutePath: {regex: "/(news)/.*\\.md$/"}
       }
     ) {
       edges {
@@ -107,23 +106,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-          }
-        }
-      }
-    }
-    blogs: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: {fileAbsolutePath: {regex: "/(blog)/.*\\.md$/"}}
-    ) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "DD.MMMM.YYYY")
           }
         }
       }

@@ -4,14 +4,14 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import NewsBox from '../components/newsBox/newsBox';
 
-const Articles = ({ data: { articles } }) => (
+const News = ({ data: { news } }) => (
   <Layout>
     <SEO title="Aktualności " />
     <section className="section">
       <div className="container">
         <h1 className="heading_h2">Aktualności</h1>
         <div className="row">
-          {articles.edges.map(({ node }) => (
+          {news.edges.map(({ node }) => (
             <div className="col-md-4">
               <NewsBox
                 link={node.fields.slug}
@@ -27,15 +27,15 @@ const Articles = ({ data: { articles } }) => (
   </Layout>
 );
 
-export default Articles;
+export default News;
 
 export const pageQuery = graphql`
-  query ArticlesQuery {
-    articles: allMarkdownRemark(
+  query NewsQuery {
+    news: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: { published: { eq: true } },
-        fileAbsolutePath: {regex: "/(articles)/.*\\.md$/"}
+        fileAbsolutePath: {regex: "/(news)/.*\\.md$/"}
       }
     ) {
       edges {

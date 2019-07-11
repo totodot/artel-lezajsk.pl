@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const AboutUs = () => (
+const Offer = () => (
   <Layout>
-    <SEO title="O nas" />
-    <h1>O nas</h1>
+    <SEO title="Oferta" />
+    <h1>Oferts</h1>
   </Layout>
 );
 
-export default AboutUs;
+export default Offer;

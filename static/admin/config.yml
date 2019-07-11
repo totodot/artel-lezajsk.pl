@@ -7,19 +7,9 @@ slug:
   sanitize_replacement: "_"
 
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
-    create: true
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
-      - { label: Featured Image, name: thumbnail, widget: image }
-  - name: articles
-    label: Article
-    folder: content/articles
+  - name: news
+    label: News
+    folder: content/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -27,6 +17,21 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { label: image, name: image, widget: image }
+      - { name: body, label: Body, widget: markdown }
+  - name: offer
+    label: Offer
+    folder: content/offer
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { label: image, name: image, widget: image }
+      - {
+          name: categories,
+          label: Categories,
+          widget: list,
+          field: { label: Category, name: category, widget: string },
+        }
       - { name: body, label: Body, widget: markdown }
   - name: pages
     label: Pages

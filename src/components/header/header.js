@@ -5,6 +5,7 @@ import cx from 'classnames';
 
 import Logo from '../../images/logo.inline.svg';
 import Hamburger from './hamburger';
+import pathsMap from '../../../pathsMap';
 
 const Header = ({ siteTitle }) => {
   const [isHamburgerOpen, setHamburgerOpen] = useState(false);
@@ -14,23 +15,23 @@ const Header = ({ siteTitle }) => {
   const menuLinks = [
     {
       name: 'o nas',
-      link: '/about',
+      link: `/${pathsMap.about}`,
     },
     {
       name: 'aktualności',
-      link: '/articles',
+      link: `/${pathsMap.news}`,
     },
     {
       name: 'galeria',
-      link: '/gallery',
+      link: `/${pathsMap.gallery}`,
     },
     {
       name: 'oferta',
-      link: '/offer',
+      link: `/${pathsMap.offer}`,
     },
     {
       name: 'kontakt',
-      link: '/contact',
+      link: `/${pathsMap.contact}`,
     },
   ];
   return (
