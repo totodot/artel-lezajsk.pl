@@ -11,18 +11,16 @@ const Offer = ({ data }) => {
   return (
     <Layout>
       <SEO title="Oferta" />
-      <section className="section">
-        <div className="container">
-          <h1 className="heading_h1">Oferta</h1>
-          <div className="row">
-            {offer.edges.map(({ node }) => (
-              <div className="col-md-4 m-b-xl" key={node.id}>
-                <OfferBox {...node.frontmatter} link={node.fields.slug} />
-              </div>
-            ))}
-          </div>
+      <div className="container">
+        <h1 className="heading_h1">Oferta</h1>
+        <div className="row">
+          {offer.edges.map(({ node }) => (
+            <div className="col-md-4 m-b-xxl" key={node.id}>
+              <OfferBox {...node.frontmatter} link={node.fields.slug} />
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
     </Layout>
   );
 };

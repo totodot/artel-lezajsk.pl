@@ -53,9 +53,7 @@ const IndexPage = ({ data }) => {
                   link={node.fields.slug}
                   title={node.frontmatter.title}
                   date={node.frontmatter.date}
-                  fluidImage={
-                    node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid
-                  }
+                  image={node.frontmatter.image}
                 />
               </div>
             ))}

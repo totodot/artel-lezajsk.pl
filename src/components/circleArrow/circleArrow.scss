@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.circle-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $color-main;
+
+  svg {
+    width: 14px;
+    fill: $color-white;
+  }
+}

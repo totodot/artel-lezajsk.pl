@@ -2,28 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import ArrowRightIcon from '../../images/icons/arrow-right.inline.svg';
-
-import ImgBulb from '../../images/bulb.png';
+import CircleArrow from '../circleArrow/circleArrow';
 
 import './newsBox.scss';
+import CustomImage from '../image/image';
 
 const NewsBox = ({
-  link, title, date, fluidImage,
+  link, title, date, image,
 }) => (
   <Link to={link}>
-    <div className="news-box">
+    <div className="news-box m-b-xxl">
       <div className="news-box__top">
         <div className="news-box__date">{date}</div>
         <h3 className="heading_h3 news-box__title">{title}</h3>
       </div>
-      <div className="news-box__bottom">
-        {fluidImage && <Image fluid={fluidImage} alt={title} />}
-      </div>
-      <div className="news-box__circle">
-        <ArrowRightIcon />
-      </div>
+      <CustomImage image={image} asBackground height={220} />
+      <CircleArrow />
     </div>
   </Link>
 );

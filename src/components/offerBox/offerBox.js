@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import './offerBox.scss';
 import CustomImage from '../image/image';
+import CircleArrow from '../circleArrow/circleArrow';
 
 const OfferBox = ({
   title, categories, image, link,
@@ -19,6 +20,7 @@ const OfferBox = ({
             <p className="offer-box__category">{category}</p>
           ))}
         </div>
+        <CircleArrow />
       </Link>
     </div>
   );

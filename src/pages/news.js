@@ -7,23 +7,21 @@ import NewsBox from '../components/newsBox/newsBox';
 const News = ({ data: { news } }) => (
   <Layout>
     <SEO title="Aktualności " />
-    <section className="section">
-      <div className="container">
-        <h1 className="heading_h2">Aktualności</h1>
-        <div className="row">
-          {news.edges.map(({ node }) => (
-            <div className="col-md-4">
-              <NewsBox
-                link={node.fields.slug}
-                title={node.frontmatter.title}
-                date={node.frontmatter.date}
-                fluidImage={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
-              />
-            </div>
-          ))}
-        </div>
+    <div className="container">
+      <h1 className="heading_h1">Aktualności</h1>
+      <div className="row">
+        {news.edges.map(({ node }) => (
+          <div className="col-md-4">
+            <NewsBox
+              link={node.fields.slug}
+              title={node.frontmatter.title}
+              date={node.frontmatter.date}
+              image={node.frontmatter.image}
+            />
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   </Layout>
 );
 
