@@ -44,6 +44,10 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   });
 
   markdowns.data.allMarkdownRemark.edges.forEach(({ node: { id, fields: { slug, template } } }) => {
+    console.log({
+      slug,
+      template,
+    });
     createPage({
       path: slug,
       component: require.resolve(`./src/templates/${String(template)}-template.js`),
@@ -69,11 +73,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: 'template',
       node,
       value: template,
-    });
-
-    console.log({
-      value,
-      template,
     });
   }
 };
