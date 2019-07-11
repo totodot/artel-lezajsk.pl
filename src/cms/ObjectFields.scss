@@ -1,0 +1,20 @@
+.object-fields-widget {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    max-height: 50vh;
+    overflow: auto;
+  }
+
+  &__key {
+    font-size: 0.8em;
+    color: #dfdfe3;
+    background: #7a8291;
+    padding: 0.3em;
+  }
+
+  &__value {
+    margin-bottom: 1em;
+    color: #7a8291;
+  }
+}

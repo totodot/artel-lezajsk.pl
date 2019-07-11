@@ -37,3 +37,14 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
+  - name: translations
+    label: Translations
+    files:
+      - file: content/translations/translations.json
+        label: Translations
+        format: json
+        name: translations
+        fields:
+          # - { label: PL, name: pl, widget: objectFields }
+          # - { label: EN, name: en, widget: objectFields }
+          - { label: Title, name: title, widget: objectFields }

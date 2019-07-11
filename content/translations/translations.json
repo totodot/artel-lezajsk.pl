@@ -1,0 +1,21 @@
+{
+    "pl": {
+        "contactForm.title": "Formularz kontakowy",
+        "questionsView.noAnswer.title": "Nie znalazłeś odpowiedzi na swoje pytanie?",
+        "questionsView.noAnswer.text": "Skontaktuj się z nami przez formularz kontaktowy.",
+        "educationalMaterials.downlaodPdf": "Pobierz w formacie PDF",
+        "educationalMaterials.downlaodPng": "Pobierz w formacie PNG",
+        "educationalMaterials.downlaodJpg": "Pobierz w formacie JPG",
+        "educationalMaterials.tutorial": "Zobacz tutorial",
+        "contactForm.form.name": "Imię i nazwisko",
+        "contactForm.form.publisher": "Wydawnictwo",
+        "contactForm.form.email": "Adres e-mail",
+        "contactForm.form.phone": "Numer telefonu",
+        "contactForm.form.contactType": "Typ zgłoszenia",
+        "contactForm.form.content": "Treść zgłoszenia"
+    },
+    "en": [
+        "news"
+    ],
+    "title": "string"
+}
