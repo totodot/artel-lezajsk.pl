@@ -13,7 +13,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: published, label: Published, widget: "boolean", default: true }
+      - { name: published, label: Published, widget: boolean, default: true }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { label: image, name: image, widget: image }
@@ -33,6 +33,37 @@ collections:
           field: { label: Category, name: category, widget: string },
         }
       - { name: body, label: Body, widget: markdown }
+  - name: promotions
+    label: Promotions
+    folder: content/promotions
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title }
+      - { name: active, label: Active, widget: boolean, default: true }
+      - { label: image, name: image, widget: image }
+      - {
+          name: type,
+          label: Type,
+          widget: select,
+          options: ["newPrice", "percentage"],
+          default: "newPrice",
+        }
+      - {
+          name: oldPrice,
+          label: Old Price,
+          widget: number,
+          valueType: float,
+        }
+      - {
+          name: newPrice,
+          label: New Price,
+          widget: number,
+          valueType: float,
+        }
+      - { name: percentage, label: Percentage, widget: number, valueType: int }
+      - { name: body, label: Body, widget: markdown }
+
   - name: pages
     label: Pages
     files:

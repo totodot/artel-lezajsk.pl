@@ -11,6 +11,7 @@ import WhyBox from '../components/whyBox/whyBox';
 import { HTMLContent } from '../components/content/content';
 import CustomImage from '../components/image/image';
 import HomeIcon from '../images/icons/home-icon.inline.svg';
+import PromotionBox from '../components/promotionBox/promotionBox';
 
 const whyBoxes = [
   {
@@ -28,15 +29,23 @@ const whyBoxes = [
 ];
 
 const IndexPage = ({ data }) => {
-  const { news, home } = data;
+  const { news, home, promotions } = data;
+  console.log(promotions);
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
       <Banner />
 
-      {home && (
-        <section className="section section_dark">
-          <div className="container">
+      <section className="section section_dark">
+        <div className="container">
+          <div className="row promotions-slider">
+            {promotions.edges.map(({ node }) => (
+              <div className="col">
+                <PromotionBox link={node.fields.slug} {...node.frontmatter} />
+              </div>
+            ))}
+          </div>
+          {home && (
             <div className="row justify-content-between">
               <div className="col-12 col-md-3">
                 <div className="home-info__image m-r-xl">
@@ -47,13 +56,13 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
               <div className="col-12 col-md-8">
-                <h2 className="heading_h2 m-t-xl">{home.frontmatter.title}</h2>
+                <h2 className="heading_h2">{home.frontmatter.title}</h2>
                 <HTMLContent className="m-l-xl" content={home.html} />
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          )}
+        </div>
+      </section>
 
       <section className="section">
         <div className="container">
@@ -92,6 +101,35 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    promotions: allMarkdownRemark(
+      filter: {
+        frontmatter: { active: { eq: true } },
+        fileAbsolutePath: {regex: "/(promotions)/.*\\.md$/"}
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            type
+            oldPrice
+            newPrice
+            percentage
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     home: markdownRemark(fileAbsolutePath: {regex: "/(home)/.*\\.md$/"}) {
       id
       html
