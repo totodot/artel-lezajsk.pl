@@ -12,6 +12,7 @@ import { HTMLContent } from '../components/content/content';
 import CustomImage from '../components/image/image';
 import HomeIcon from '../images/icons/home-icon.inline.svg';
 import PromotionBox from '../components/promotionBox/promotionBox';
+import SimpleSlider from '../components/slider/slider';
 
 const whyBoxes = [
   {
@@ -30,7 +31,10 @@ const whyBoxes = [
 
 const IndexPage = ({ data }) => {
   const { news, home, promotions } = data;
-  console.log(promotions);
+  const promotionsSliderOptions = {
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
@@ -38,21 +42,27 @@ const IndexPage = ({ data }) => {
 
       <section className="section section_dark">
         <div className="container">
-          <div className="row promotions-slider">
-            {promotions.edges.map(({ node }) => (
-              <div className="col">
-                <PromotionBox link={node.fields.slug} {...node.frontmatter} />
-              </div>
-            ))}
+          <div className="promotions-slider">
+            <SimpleSlider
+              itemsPerSlide={4}
+              items={promotions.edges.length}
+              options={promotionsSliderOptions}
+            >
+              {promotions.edges.map(({ node }) => (
+                <PromotionBox key={node.id} link={node.fields.slug} {...node.frontmatter} />
+              ))}
+            </SimpleSlider>
           </div>
           {home && (
             <div className="row justify-content-between">
               <div className="col-12 col-md-3">
                 <div className="home-info__image m-r-xl">
                   <CustomImage image={home.frontmatter.image} />
-                  <div className="home-info__icon">
+                  {/*
+                    <div className="home-info__icon">
                     <HomeIcon />
-                  </div>
+                    </div>
+                  */}
                 </div>
               </div>
               <div className="col-12 col-md-8">
@@ -67,17 +77,17 @@ const IndexPage = ({ data }) => {
       <section className="section">
         <div className="container">
           <h2 className="heading_h2">Aktualności</h2>
-          <div className="row">
-            {news.edges.map(({ node }) => (
-              <div className="col">
+          <div>
+            <SimpleSlider itemsPerSlide={3} items={news.edges.length}>
+              {news.edges.map(({ node }) => (
                 <NewsBox
                   link={node.fields.slug}
                   title={node.frontmatter.title}
                   date={node.frontmatter.date}
                   image={node.frontmatter.image}
                 />
-              </div>
-            ))}
+              ))}
+            </SimpleSlider>
           </div>
         </div>
       </section>
@@ -96,6 +106,17 @@ const IndexPage = ({ data }) => {
     </Layout>
   );
 };
+
+// <SimpleSlider items="2">
+//   {news.edges.map(({ node }) => (
+//     <NewsBox
+//       link={node.fields.slug}
+//       title={node.frontmatter.title}
+//       date={node.frontmatter.date}
+//       image={node.frontmatter.image}
+//     />
+//   ))}
+// </SimpleSlider>
 
 export default IndexPage;
 

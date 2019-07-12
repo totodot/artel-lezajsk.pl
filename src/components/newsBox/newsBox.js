@@ -8,18 +8,16 @@ import './newsBox.scss';
 import CustomImage from '../image/image';
 
 const NewsBox = ({
-  link, title, date, image,
+  title, date, image, link,
 }) => (
-  <Link to={link}>
-    <div className="news-box m-b-xxl">
-      <div className="news-box__top">
-        <div className="news-box__date">{date}</div>
-        <h3 className="heading_h3 news-box__title">{title}</h3>
-      </div>
-      <CustomImage image={image} asBackground height={220} />
-      <CircleArrow />
+  <div className="news-box m-b-xl m-l-md m-r-md">
+    <div className="news-box__top">
+      <div className="news-box__date">{date}</div>
+      <h3 className="heading_h3 news-box__title">{title}</h3>
     </div>
-  </Link>
+    <CustomImage image={image} asBackground height={220} />
+    <CircleArrow link={link} />
+  </div>
 );
 
 NewsBox.propTypes = {

@@ -9,6 +9,9 @@
 @import "./hamburger.scss";
 @import "./footer.scss";
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 html {
   font-size: 10px;
 }
@@ -60,6 +63,8 @@ body {
   display: flex;
   padding-bottom: 8em;
   // padding: 5em 0 10em 0;
+  min-height: 0px; // Fix react-slick
+  min-width: 0px; // Fix react-slick
   &_dark {
     background: $color-secondary-100;
   }
