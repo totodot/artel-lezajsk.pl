@@ -5,8 +5,12 @@
 @import "./variables.scss";
 @import "./header.scss";
 @import "./nav.scss";
+@import "./home.scss";
 @import "./hamburger.scss";
 @import "./footer.scss";
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 html {
   font-size: 10px;
@@ -25,9 +29,14 @@ body {
 }
 
 .heading {
+  &_h1 {
+    font-size: 3.6rem;
+    font-weight: 800;
+    margin: 1em;
+  }
   &_h2 {
     font-size: 3.6rem;
-    margin-bottom: 1.5em;
+    margin: 1.5em 0;
   }
 
   &_h3 {
@@ -51,8 +60,16 @@ body {
 }
 
 .section {
-  padding: 5em 0 10em 0;
+  display: flex;
+  padding-bottom: 8em;
+  // padding: 5em 0 10em 0;
+  min-height: 0px; // Fix react-slick
+  min-width: 0px; // Fix react-slick
   &_dark {
-    background: $color-tertiary;
+    background: $color-secondary-100;
   }
+}
+
+.promotions-slider {
+  transform: translateY(-145px);
 }

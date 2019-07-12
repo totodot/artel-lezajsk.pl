@@ -1,20 +1,18 @@
 const fsMiddlewareAPI = require('netlify-cms-backend-fs/dist/fs');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const pathsMap = require('./pathsMap');
+
+const getTranslatedPath = (path) => {
+  const [, module, ...rest] = path.split('/');
+  const translatedModule = pathsMap[module];
+  if (translatedModule) {
+    return `/${translatedModule}/${rest.join('/')}`;
+  }
+  return path;
+};
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  const products = await graphql(`
-    {
-      allProductsJson {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `);
-
   const markdowns = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -31,30 +29,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `);
 
-  products.data.allProductsJson.edges.forEach((edge) => {
-    const product = edge.node;
-
-    createPage({
-      path: `/gql/${product.slug}/`,
-      component: require.resolve('./src/templates/product-graphql.js'),
-      context: {
-        slug: product.slug,
-      },
-    });
-  });
-
   markdowns.data.allMarkdownRemark.edges.forEach(({ node: { id, fields: { slug, template } } }) => {
-    console.log({
-      slug,
-      template,
-    });
-    createPage({
-      path: slug,
-      component: require.resolve(`./src/templates/${String(template)}-template.js`),
-      context: {
-        id,
-      },
-    });
+    if (template && ['about', 'news', 'offer'].indexOf(template) > -1) {
+      createPage({
+        path: getTranslatedPath(slug),
+        component: require.resolve(`./src/templates/${String(template)}-template.js`),
+        context: {
+          id,
+        },
+      });
+    }
   });
 };
 
@@ -67,7 +51,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: 'slug',
       node,
-      value,
+      value: getTranslatedPath(value),
     });
     createNodeField({
       name: 'template',
@@ -79,19 +63,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.onCreateDevServer = ({ app }) => {
   fsMiddlewareAPI(app);
 };
-// {
-//   allMarkdownRemark(limit: 1000) {
-//     edges {
-//       node {
-//         id
-//         fields {
-//           slug
-//         }
-//         frontmatter {
-//           tags
-//           templateKey
-//         }
-//       }
-//     }
-//   }
-// }
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  const newPage = { ...page };
+  newPage.path = getTranslatedPath(page.path);
+  deletePage(page);
+  createPage(newPage);
+};

@@ -19,7 +19,6 @@ const GalleryPage = ({ data }) => {
     width: aspectRatio,
     height: 1,
   }));
-  console.log(imagesWithWidth);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -35,29 +34,26 @@ const GalleryPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Galeria zdjęć" />
-      <section className="section">
-        <div className="container">
-          <h1 className="heading_h2">Galeria</h1>
-
-          <div>
-            <Gallery photos={imagesWithWidth} onClick={openLightbox} />
-            <ModalGateway>
-              {viewerIsOpen ? (
-                <Modal onClose={closeLightbox}>
-                  <Carousel
-                    currentIndex={currentImage}
-                    views={images.map(x => ({
-                      ...x,
-                      srcset: x.srcSet,
-                      caption: x.title,
-                    }))}
-                  />
-                </Modal>
-              ) : null}
-            </ModalGateway>
-          </div>
+      <div className="container">
+        <h1 className="heading_h1">Galeria</h1>
+        <div className="m-b-xxl">
+          <Gallery photos={imagesWithWidth} onClick={openLightbox} />
+          <ModalGateway>
+            {viewerIsOpen ? (
+              <Modal onClose={closeLightbox}>
+                <Carousel
+                  currentIndex={currentImage}
+                  views={images.map(x => ({
+                    ...x,
+                    srcset: x.srcSet,
+                    caption: x.title,
+                  }))}
+                />
+              </Modal>
+            ) : null}
+          </ModalGateway>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 };

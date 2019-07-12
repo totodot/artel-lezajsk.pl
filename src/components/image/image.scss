@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.custom-image {
+  &_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    & > img {
+      object-fit: cover !important; // or whatever
+      object-position: 0% 0% !important; // or whatever
+      font-family: "object-fit: cover !important; object-position: 0% 0% !important;"; // needed for IE9+ polyfill
+    }
+  }
+}

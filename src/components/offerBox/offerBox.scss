@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+.offer-box {
+  box-shadow: $shadow;
+  padding-bottom: 3rem;
+  position: relative;
+  height: 100%;
+  background: $color-secondary-100;
+
+  &__title {
+    background: $color-main;
+    color: $color-white;
+    padding: 2.4rem;
+  }
+
+  &__category {
+    font-size: 1.4rem;
+    margin-bottom: 1em;
+  }
+
+  &__categories {
+    padding: 2.4rem;
+  }
+}

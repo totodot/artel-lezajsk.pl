@@ -1,21 +1,12 @@
 @import "../../styles/variables.scss";
 .news-box {
+  box-shadow: $shadow;
   position: relative;
-  height: 450px;
-  margin-bottom: 60px;
+
   &__top {
-    height: 50%;
+    height: 230px;
     padding: 3em;
-    background: $color-tertiary;
-  }
-
-  &__bottom {
-    height: 50%;
-    overflow: hidden;
-
-    .gatsby-image-wrapper {
-      height: 100%;
-    }
+    background: $color-secondary-100;
   }
 
   &__date {
@@ -27,24 +18,5 @@
     overflow: hidden;
     height: 3.6em;
     line-height: 1.2em;
-  }
-
-  &__circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(50%, 50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: $color-main;
-
-    svg {
-      width: 14px;
-      fill: $color-white;
-    }
   }
 }

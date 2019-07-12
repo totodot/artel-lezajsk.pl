@@ -1,5 +1,13 @@
 import React from 'react';
 
-export default function AboutTemplate() {
-  return <h1>test</h1>;
-}
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+
+const AboutUs = () => (
+  <Layout>
+    <SEO title="O nas" />
+    <h1>O nas test</h1>
+  </Layout>
+);
+
+export default AboutUs;

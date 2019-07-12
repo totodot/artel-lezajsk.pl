@@ -4,11 +4,10 @@ import Image from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export default function Template({ data: { markdownRemark } }) {
+export default function News({ data: { markdownRemark } }) {
   const {
     frontmatter: { date, title, image },
   } = markdownRemark;
-
   return (
     <Layout>
       <SEO title={`Aktualności - ${title}`} />
@@ -23,7 +22,7 @@ export default function Template({ data: { markdownRemark } }) {
 }
 
 export const pageQuery = graphql`
-  query ArticlePostByID($id: String!) {
+  query NewsPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
