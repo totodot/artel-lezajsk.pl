@@ -42,3 +42,10 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
+      - file: content/home/index.md
+        label: Home
+        name: home
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: image, name: image, widget: image }
+          - { label: Body, name: body, widget: markdown }

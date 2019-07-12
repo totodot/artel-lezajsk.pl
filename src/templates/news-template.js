@@ -22,7 +22,7 @@ export default function News({ data: { markdownRemark } }) {
 }
 
 export const pageQuery = graphql`
-  query ArticlePostByID($id: String!) {
+  query NewsPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

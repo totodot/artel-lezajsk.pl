@@ -19,7 +19,6 @@ const GalleryPage = ({ data }) => {
     width: aspectRatio,
     height: 1,
   }));
-  console.log(imagesWithWidth);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -37,7 +36,7 @@ const GalleryPage = ({ data }) => {
       <SEO title="Galeria zdjęć" />
       <div className="container">
         <h1 className="heading_h1">Galeria</h1>
-        <div className="m-b-xxl" >
+        <div className="m-b-xxl">
           <Gallery photos={imagesWithWidth} onClick={openLightbox} />
           <ModalGateway>
             {viewerIsOpen ? (

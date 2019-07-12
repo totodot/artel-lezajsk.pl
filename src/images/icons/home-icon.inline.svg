@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.01 43.52">
+  <defs>
+    <style>
+      #home-info-icon .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="home-info-icon">
+    <path class="cls-1" d="M4.87,21.3A21.23,21.23,0,0,0,45.46,30" />
+    <polyline class="cls-1" points="1 24.93 4.87 21.04 9.63 24.87" />
+    <path class="cls-1" d="M46.14,22.22A21.23,21.23,0,0,0,5.55,13.53" />
+    <polyline class="cls-1" points="50.01 18.59 46.14 22.48 41.38 18.65" />
+    <path
+      class="cls-1"
+      d="M25.44,12l-7.79,7.85a.42.42,0,0,0-.12.3v8a.42.42,0,0,0,.42.41H33.1a.42.42,0,0,0,.42-.41v-8a.47.47,0,0,0-.12-.3L25.61,12C25.44,11.87,25.6,11.87,25.44,12Z"
+    />
+    <line class="cls-1" x1="15.71" y1="21.6" x2="25.44" y2="12.04" />
+    <line class="cls-1" x1="35.22" y1="21.6" x2="25.49" y2="12.04" />
+  </g>
+</svg>

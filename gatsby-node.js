@@ -13,18 +13,6 @@ const getTranslatedPath = (path) => {
 };
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  const products = await graphql(`
-    {
-      allProductsJson {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `);
-
   const markdowns = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -41,26 +29,16 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `);
 
-  products.data.allProductsJson.edges.forEach((edge) => {
-    const product = edge.node;
-
-    createPage({
-      path: `/gql/${product.slug}/`,
-      component: require.resolve('./src/templates/product-graphql.js'),
-      context: {
-        slug: product.slug,
-      },
-    });
-  });
-
   markdowns.data.allMarkdownRemark.edges.forEach(({ node: { id, fields: { slug, template } } }) => {
-    createPage({
-      path: getTranslatedPath(slug),
-      component: require.resolve(`./src/templates/${String(template)}-template.js`),
-      context: {
-        id,
-      },
-    });
+    if (template && ['about', 'news', 'offer'].indexOf(template) > -1) {
+      createPage({
+        path: getTranslatedPath(slug),
+        component: require.resolve(`./src/templates/${String(template)}-template.js`),
+        context: {
+          id,
+        },
+      });
+    }
   });
 };
 

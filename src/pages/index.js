@@ -3,11 +3,14 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import Banner from '../components/banner/banner';
 import NewsBox from '../components/newsBox/newsBox';
 import WhyBox from '../components/whyBox/whyBox';
+
+import { HTMLContent } from '../components/content/content';
+import CustomImage from '../components/image/image';
+import HomeIcon from '../images/icons/home-icon.inline.svg';
 
 const whyBoxes = [
   {
@@ -25,23 +28,32 @@ const whyBoxes = [
 ];
 
 const IndexPage = ({ data }) => {
-  const { news } = data;
-  console.log(data);
+  const { news, home } = data;
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
       <Banner />
 
-      <section className="section section_dark">
-        <div className="container">
-          <h1>Hi people</h1>
-          <p>Welcome to your new Gatsby site.</p>
-          <p>Now go build something great.</p>
-          <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-            <Image />
+      {home && (
+        <section className="section section_dark">
+          <div className="container">
+            <div className="row justify-content-between">
+              <div className="col-12 col-md-3">
+                <div className="home-info__image m-r-xl">
+                  <CustomImage image={home.frontmatter.image} />
+                  <div className="home-info__icon">
+                    <HomeIcon />
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-md-8">
+                <h2 className="heading_h2 m-t-xl">{home.frontmatter.title}</h2>
+                <HTMLContent className="m-l-xl" content={home.html} />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="section">
         <div className="container">
@@ -80,6 +92,20 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    home: markdownRemark(fileAbsolutePath: {regex: "/(home)/.*\\.md$/"}) {
+      id
+      html
+      frontmatter {
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
     news: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 3
