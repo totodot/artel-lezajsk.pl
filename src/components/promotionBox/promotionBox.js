@@ -9,7 +9,18 @@ import { cx } from 'emotion';
 
 const PromotionBox = React.memo(({
   link, title, image, type, percentage, oldPrice, newPrice,
-}) => (
+}) => 
+{
+  console.log({
+    link,
+    title,
+    image,
+    type,
+    percentage,
+    oldPrice,
+    newPrice
+  })
+return (
   // <Link to={link}>
   <div className="promotion-box">
     <div className="promotion-box__top">
@@ -31,7 +42,7 @@ const PromotionBox = React.memo(({
   </div>
   // </Link>
 ));
-
+          }
 PromotionBox.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

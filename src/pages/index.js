@@ -32,7 +32,7 @@ const whyBoxes = [
 const IndexPage = ({ data }) => {
   const { news, home, promotions } = data;
   const promotionsSliderOptions = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
   };
   return (
