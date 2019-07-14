@@ -2,6 +2,7 @@
 .promotion-box {
   box-shadow: $shadow;
   position: relative;
+  margin: 0 1rem 6rem;
   &__top {
     height: 145px;
     padding: 1em;
@@ -14,6 +15,9 @@
 
   &__name {
     font-size: 1.8rem;
+    line-height: 1.2em;
+    height: 2 * 1.2em;
+    overflow: hidden;
     font-weight: 600;
   }
 

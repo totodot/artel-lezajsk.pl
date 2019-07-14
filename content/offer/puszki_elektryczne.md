@@ -1,14 +1,15 @@
 ---
-title: aaa
-image: /assets/icon.png
+title: Puszki elektryczne
+image: /assets/american-public-power-association-430853-unsplash.jpg
 categories:
-  - Test
+  - Puszki podtynkowe połączeniowe oraz szeregowe
   - Oświetlenie Led
   - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
+  - Natynkowe
+  - Hermetyczne
+  - Puszki złącza odgromowego
+  - Do płyt gipsowych
+  - Instalacyjne S-Box z możliwością montażu szyny TH-35
+  - Dekle i pokrywy
 ---
-Puszki
+Puszki elektryczne

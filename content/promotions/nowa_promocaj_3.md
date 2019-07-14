@@ -1,10 +1,10 @@
 ---
-title: 'Nowa promocaj #3'
+title: Lampa wisząca  Loft
 active: true
-image: /assets/screenshot_2019-05-16_at_13.03.18.png
+image: /assets/group-11.jpg
 type: newPrice
-oldPrice: 123
-newPrice: 321
+oldPrice: 799
+newPrice: 699
 percentage: 21
 ---
 dsa

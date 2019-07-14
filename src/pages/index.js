@@ -56,18 +56,16 @@ const IndexPage = ({ data }) => {
           {home && (
             <div className="row justify-content-between">
               <div className="col-12 col-md-3">
-                <div className="home-info__image m-r-xl">
+                <div className="home-info__image m-r-xxl">
                   <CustomImage image={home.frontmatter.image} />
-                  {/*
-                    <div className="home-info__icon">
+                  <div className="home-info__icon">
                     <HomeIcon />
-                    </div>
-                  */}
+                  </div>
                 </div>
               </div>
               <div className="col-12 col-md-8">
-                <h2 className="heading_h2">{home.frontmatter.title}</h2>
-                <HTMLContent className="m-l-xl" content={home.html} />
+                <div className="home-info__title">{home.frontmatter.title}</div>
+                <HTMLContent className="home-info__content" content={home.html} />
               </div>
             </div>
           )}
@@ -81,6 +79,7 @@ const IndexPage = ({ data }) => {
             <SimpleSlider itemsPerSlide={3} items={news.edges.length}>
               {news.edges.map(({ node }) => (
                 <NewsBox
+                  key={node.fields.slug}
                   link={node.fields.slug}
                   title={node.frontmatter.title}
                   date={node.frontmatter.date}

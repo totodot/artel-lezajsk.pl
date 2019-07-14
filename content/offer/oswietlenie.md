@@ -1,15 +1,14 @@
 ---
 title: Oświetlenie
-image: /assets/bee-eater-vector-bird-illustration.jpg
+image: /assets/jenn-jpeg-1058224-unsplash.jpg
 categories:
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
+  - 'Oczka, oprawy halogenowe'
+  - Spoty LED
+  - Żarówki
+  - Świetlówki
+  - Oprawy
+  - Lampy
+  - 'Oświetlenie uliczne, lampy uliczne'
 ---
-
 Test
+

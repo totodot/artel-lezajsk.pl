@@ -2,6 +2,7 @@
 .news-box {
   box-shadow: $shadow;
   position: relative;
+  margin: 0 1rem 5rem;
 
   &__top {
     height: 230px;
@@ -18,5 +19,18 @@
     overflow: hidden;
     height: 3.6em;
     line-height: 1.2em;
+  }
+
+  &__date{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  &__clock{
+    width: 16px;
+    height: 16px;
+    fill: $color-secondary;
+    margin-right: 1em;
   }
 }

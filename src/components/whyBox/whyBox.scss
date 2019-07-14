@@ -1,16 +1,20 @@
 @import "../../styles/variables.scss";
 .why-box {
   height: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
   padding: 2em;
 
   &__circle {
     position: relative;
-    width: 100%;
+    width: 75%;
     border-radius: 50%;
     background: $color-white;
     margin-bottom: 2em;
+    @media (min-width: $md) {
+      width: 100%;
+    }
 
     &::before {
       content: "";

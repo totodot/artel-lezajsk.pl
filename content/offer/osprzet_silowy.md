@@ -1,14 +1,14 @@
 ---
 title: Osprzęt siłowy
-image: /assets/michael-browning-227688-unsplash.jpg
+image: /assets/thomas-kelley-74096-unsplash.jpg
 categories:
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
-  - Test
-  - Oświetlenie Led
+  - Rozdzielnice
+  - Zestawy siłowe
+  - Gniazda stałe, przenośne, tablicowe
+  - Wtyki odbiornikowe, tablicowe
+  - Wtyki przenośne
+  - Rozdzielnie budowlane przenośne
+  - Rozgałęźniki, rozdzielacze
+  - Łączniki krzywkowe
 ---
 Osprzęt siłowy

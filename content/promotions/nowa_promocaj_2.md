@@ -1,10 +1,10 @@
 ---
-title: 'Nowa promocaj #3'
+title: Przedłużacz blatowy 2X2P+Z 2USB audio
 active: true
-image: /assets/photo-1468497513706-9f67b6b86ad4.jpg
+image: /assets/group-10.jpg
 type: newPrice
-oldPrice: 123
-newPrice: 321
+oldPrice: 182
+newPrice: 137
 percentage: 23
 ---
 321

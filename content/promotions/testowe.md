@@ -1,10 +1,10 @@
 ---
-title: Testowe
+title: Lampy stojące
 active: true
-image: /assets/26708-unsplash.jpg
-type: newPrice
+image: /assets/group-11.jpg
+type: percentage
 oldPrice: 143
 newPrice: 120
-percentage: 0
+percentage: -5
 ---
 dsad
