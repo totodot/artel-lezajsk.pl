@@ -9,8 +9,7 @@ import { cx } from 'emotion';
 
 const PromotionBox = React.memo(({
   link, title, image, type, percentage, oldPrice, newPrice,
-}) => 
-{
+}) => {
   console.log({
     link,
     title,
@@ -18,31 +17,31 @@ const PromotionBox = React.memo(({
     type,
     percentage,
     oldPrice,
-    newPrice
-  })
-return (
-  // <Link to={link}>
-  <div className="promotion-box">
-    <div className="promotion-box__top">
-      <div className="promotion-box__label m-b-lg">Promocja</div>
-      <div className="m-l-md">
-        <div className="promotion-box__name m-b-md">{title}</div>
-        <div>
-          {type === 'percentage' && (
-            <span className="promotion-box__value">{`${percentage}%`}</span>
-          )}
-          {type === 'newPrice' && (
-            <span className="promotion-box__value-crossed m-r-md">{`${oldPrice} zł`}</span>
-          )}
-          {type === 'newPrice' && <span className="promotion-box__value">{`${newPrice} zł`}</span>}
+    newPrice,
+  });
+  return (
+    <div className="promotion-box">
+      <div className="promotion-box__top">
+        <div className="promotion-box__label m-b-lg">Promocja</div>
+        <div className="m-l-md">
+          <div className="promotion-box__name m-b-md">{title}</div>
+          <div>
+            {type === 'percentage' && (
+              <span className="promotion-box__value">{`${percentage}%`}</span>
+            )}
+            {type === 'newPrice' && (
+              <span className="promotion-box__value-crossed m-r-md">{`${oldPrice} zł`}</span>
+            )}
+            {type === 'newPrice' && (
+              <span className="promotion-box__value">{`${newPrice} zł`}</span>
+            )}
+          </div>
         </div>
       </div>
+      <CustomImage image={image} asBackground height={180} />
     </div>
-    <CustomImage image={image} asBackground height={180} />
-  </div>
-  // </Link>
-));
-          }
+  );
+});
 PromotionBox.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
