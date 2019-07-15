@@ -29,12 +29,14 @@ const whyBoxes = [
   },
 ];
 
-const IndexPage = ({ data }) => {
+const IndexPage = React.memo(({ data }) => {
   const { news, home, promotions } = data;
   const promotionsSliderOptions = {
     autoplay: false,
     autoplaySpeed: 5000,
   };
+
+  console.log(data);
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
@@ -104,7 +106,7 @@ const IndexPage = ({ data }) => {
       </section>
     </Layout>
   );
-};
+});
 
 // <SimpleSlider items="2">
 //   {news.edges.map(({ node }) => (

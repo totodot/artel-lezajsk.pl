@@ -4,10 +4,11 @@ import './slider.scss';
 
 import PropTypes from 'prop-types';
 
-const SimpleSlider = ({ children, items, itemsPerSlide, options }) => {
-  const getValueForResponsive = a => Math.min(...[a, itemsPerSlide]);
+const SimpleSlider = ({
+  children, items, itemsPerSlide, options,
+}) => {
   const slidesToShow = Math.min(...[itemsPerSlide, items]);
-
+  const getValueForResponsive = a => Math.min(...[a, slidesToShow]);
   const settings = {
     dots: true,
     infinite: true,
