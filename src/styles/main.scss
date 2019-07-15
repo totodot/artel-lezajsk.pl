@@ -20,7 +20,7 @@ html {
 body {
   font-size: 1.4rem;
   font-family: Tahoma, sans-serif;
-  color: #2b3345;
+  color: $color-secondary;
   letter-spacing: 0.4px;
   @media (min-width: $md) {
     font-size: 1.6rem;

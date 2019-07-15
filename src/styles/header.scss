@@ -87,6 +87,8 @@
     transform: translateX(-20px);
     opacity: 0;
     transition: none;
+    padding: 1em;
+    text-align: center;
   }
   @for $i from 1 through 10 {
     &__item:nth-child(#{$i}n) {
@@ -95,14 +97,16 @@
   }
 
   &__link {
-    display: block;
+    display: inline-block;
     position: relative;
     font-size: 2.4rem;
     color: $color-white;
     text-transform: uppercase;
-    padding: 0.5em;
     font-weight: 700;
     transition: opacity 0.2s;
-    text-align: center;
+
+    &_active {
+      border-bottom: 2px solid $color-white;
+    }
   }
 }
