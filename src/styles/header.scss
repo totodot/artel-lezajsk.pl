@@ -53,14 +53,18 @@
 
 .mobile-nav {
   $self: &;
-  width: 100%;
-  height: 0;
+  position: fixed;
+  top: $header-height-mobile;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
   opacity: 0;
-  transition: height 0.3s ease, opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   background: $color-secondary;
 
   @media (min-width: $md) {
@@ -68,8 +72,9 @@
   }
 
   &_active {
-    height: 150px;
+    z-index: 2;
     opacity: 1;
+    background: rgba($color-secondary, 0.9);
 
     #{ $self }__item {
       transform: translateX(0);
@@ -92,10 +97,11 @@
   &__link {
     display: block;
     position: relative;
-    font-size: 1.4rem;
-    color: #fff;
+    font-size: 2.4rem;
+    color: $color-white;
     text-transform: uppercase;
-    padding: 5px;
+    padding: 0.5em;
+    font-weight: 700;
     transition: opacity 0.2s;
     text-align: center;
   }

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import cx from 'classnames';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import Logo from '../../images/logo.inline.svg';
 import Hamburger from './hamburger';
@@ -9,6 +10,13 @@ import pathsMap from '../../../pathsMap';
 
 const Header = ({ siteTitle }) => {
   const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+  useEffect(() => {
+    if (isHamburgerOpen) {
+      disableBodyScroll();
+    } else {
+      enableBodyScroll();
+    }
+  }, [isHamburgerOpen]);
   const toogleHamburger = () => {
     setHamburgerOpen(!isHamburgerOpen);
   };
