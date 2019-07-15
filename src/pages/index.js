@@ -36,7 +36,6 @@ const IndexPage = React.memo(({ data }) => {
     autoplaySpeed: 5000,
   };
 
-  console.log(data);
   return (
     <Layout>
       <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
@@ -44,20 +43,22 @@ const IndexPage = React.memo(({ data }) => {
 
       <section className="section section_dark">
         <div className="container">
-          <div className="promotions-slider">
-            <SimpleSlider
-              itemsPerSlide={4}
-              items={promotions.edges.length}
-              options={promotionsSliderOptions}
-            >
-              {promotions.edges.map(({ node }) => (
-                <PromotionBox key={node.id} link={node.fields.slug} {...node.frontmatter} />
-              ))}
-            </SimpleSlider>
-          </div>
+          {!!promotions.edges.length && (
+            <div className="promotions-slider">
+              <SimpleSlider
+                itemsPerSlide={4}
+                items={promotions.edges.length}
+                options={promotionsSliderOptions}
+              >
+                {promotions.edges.map(({ node }) => (
+                  <PromotionBox key={node.id} link={node.fields.slug} {...node.frontmatter} />
+                ))}
+              </SimpleSlider>
+            </div>
+          )}
           {home && (
-            <div className="row justify-content-between">
-              <div className="col-12 col-md-3">
+            <div className="row m-t-xxl">
+              <div className="col-12 col-md-4">
                 <div className="home-info__image m-r-xxl">
                   <CustomImage image={home.frontmatter.image} />
                   <div className="home-info__icon">
@@ -97,7 +98,7 @@ const IndexPage = React.memo(({ data }) => {
           <h2 className="heading_h2">Dlaczego my?</h2>
           <div className="row">
             {whyBoxes.map(box => (
-              <div className="col-md-4">
+              <div className="col-md-4" key={box.name}>
                 <WhyBox {...box} key={box.name} />
               </div>
             ))}
@@ -107,17 +108,6 @@ const IndexPage = React.memo(({ data }) => {
     </Layout>
   );
 });
-
-// <SimpleSlider items="2">
-//   {news.edges.map(({ node }) => (
-//     <NewsBox
-//       link={node.fields.slug}
-//       title={node.frontmatter.title}
-//       date={node.frontmatter.date}
-//       image={node.frontmatter.image}
-//     />
-//   ))}
-// </SimpleSlider>
 
 export default IndexPage;
 
@@ -143,7 +133,7 @@ export const pageQuery = graphql`
             percentage
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -159,7 +149,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 500, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -185,7 +175,7 @@ export const pageQuery = graphql`
             date(formatString: "DD.MM.YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
