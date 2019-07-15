@@ -1,8 +1,7 @@
 @import "../../styles/variables.scss";
 .news-box {
-  box-shadow: $shadow;
-  position: relative;
-  margin: 0 1rem 5rem;
+  margin: 0 1rem;
+  @include box-shadow;
 
   &__top {
     height: 230px;
