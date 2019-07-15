@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import CircleArrow from '../circleArrow/circleArrow';
 import CustomImage from '../image/image';
 
 import './promotionBox.scss';
-import { cx } from 'emotion';
 
 const PromotionBox = React.memo(({
   link, title, image, type, percentage, oldPrice, newPrice,
@@ -19,6 +16,7 @@ const PromotionBox = React.memo(({
     oldPrice,
     newPrice,
   });
+  
   return (
     <div className="promotion-box">
       <div className="promotion-box__top">
@@ -45,6 +43,16 @@ const PromotionBox = React.memo(({
 PromotionBox.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['percentage', 'newPrice']).isRequired,
+  percentage: PropTypes.number,
+  oldPrice: PropTypes.number,
+  newPrice: PropTypes.number,
+};
+
+PromotionBox.defaultProps = {
+  percentage: 0,
+  oldPrice: 0,
+  newPrice: 0,
 };
 
 export default PromotionBox;

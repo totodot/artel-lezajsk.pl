@@ -18,3 +18,19 @@ $lg: 992px;
 $xl: 1200px;
 
 $shadow: 0px 40px 60px -60px black;
+@mixin box-shadow {
+  position: relative;
+  margin-bottom: 5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    height: 10%;
+    background: black;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 43px -5px black;
+    z-index: -1;
+  }
+}

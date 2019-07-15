@@ -1,8 +1,8 @@
 @import "../../styles/variables.scss";
 .promotion-box {
-  box-shadow: $shadow;
-  position: relative;
-  margin: 0 1rem 6rem;
+  margin: 0 1rem;
+  @include box-shadow;
+
   &__top {
     height: 145px;
     padding: 1em;
