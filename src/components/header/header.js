@@ -75,7 +75,7 @@ const Header = ({ siteTitle }) => {
         <ul className="mobile-nav__list">
           {menuLinks.map(({ name, link }) => (
             <li className="mobile-nav__item" key={name}>
-              <Link to={link} className="mobile-nav__link" activeClassName="nav__link_active">
+              <Link to={link} className="mobile-nav__link" activeClassName="mobile-nav__link_active">
                 {name}
               </Link>
             </li>

@@ -84,7 +84,7 @@ function SEO({
 }
 
 SEO.defaultProps = {
-  lang: 'en',
+  lang: 'pl',
   meta: [],
   keywords: [],
 };

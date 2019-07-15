@@ -7,7 +7,6 @@ import OfferBox from '../components/offerBox/offerBox';
 
 const Offer = ({ data }) => {
   const { offer } = data;
-  console.log(offer);
   return (
     <Layout>
       <SEO title="Oferta" />
@@ -45,7 +44,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

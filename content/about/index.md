@@ -1,23 +1,8 @@
 ---
-title: About our values
+title: O nas
 ---
+Firma **ARTEL** powstała w 1993 roku. Naszą działalnością jest handel materiałami elektrycznymi oraz elektroinstalacyjnymi. ARTEL wyróżnia się doświadczeniem – **25 lat na rynku**. Dobrze wyposażony magazyn gwarantuje szeroki i szybki dostęp do standardowych i nowoczesnych rozwiązań elektrycznych. Nasze działania sprawiają, iż pozycja hurtowni ciągle rośnie, osiągając coraz wyższe poziomy rozwoju. W naszej ofercie znajdziecie Państwo materiały potrzebne do zrobienia i modernizacji instalacji elektrycznych tj. przewody, kable, bezpieczniki, wyłączniki, gniazda itd. Posiadamy szeroki wybór aparatury modułowej, lamp oświetleniowych, źródeł światła (żarowe, halogenowe, świetlówkowe, ledowe) i wiele innych. Posiadamy największy w okolicy wybór oświetlenia LED. Sprowadzamy na zamówienie lampy większości najpopularniejszych marek, takich jak **AZZARDO, ZUMA LINE, SIGMA, NOWODVORSKI** itd. Jeżeli potrzebujesz ŻYRANDOLE do mieszkania czy firmy, wycenimy je specjalnie dla Ciebie. Dzięki wieloletniemu doświadczeniu oferujemy państwu produkty sprawdzone oraz mało awaryjne. Służymy pomocą i doradztwem.
 
-### Shade-grown coffee
+Zapraszamy do współpracy elektryków, firmy oraz osoby prywatne. Jesteśmy bardzo elastyczni i potrafimy dopasować się do każdego.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
-
-### Single origin
-
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+ZAPRASZAMY SERDECZNIE DO WSPÓŁPRACY!!!

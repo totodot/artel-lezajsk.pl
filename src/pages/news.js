@@ -11,7 +11,7 @@ const News = ({ data: { news } }) => (
       <h1 className="heading_h1">Aktualności</h1>
       <div className="row">
         {news.edges.map(({ node }) => (
-          <div className="col-md-4">
+          <div className="col-md-4" key={node.id}>
             <NewsBox
               link={node.fields.slug}
               title={node.frontmatter.title}
@@ -47,7 +47,7 @@ export const pageQuery = graphql`
             date(formatString: "DD.MM.YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

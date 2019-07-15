@@ -8,7 +8,7 @@ const CustomImage = ({ image, asBackground, height }) => {
   const style = {
     ...(asBackground
       ? {
-        height: `${height}px`,
+        height: height === undefined ? '100%' : `${height}px`,
       }
       : {}),
   };
