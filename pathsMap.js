@@ -4,4 +4,5 @@ module.exports = {
   gallery: 'galeria',
   offer: 'oferta',
   contact: 'kontakt',
+  success: 'sukces',
 };
