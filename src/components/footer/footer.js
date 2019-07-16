@@ -5,7 +5,6 @@ import EnvelopeSvg from '../../images/icons/envelope.inline.svg';
 import siteConfig from '../../../siteConfig';
 
 const config = siteConfig[process.env.GATSBY_PROJECT || 'artel'];
-
 const getOpeningTime = ({ open, close }) => {
   const getTime = times => times.map(time => time.toString().padStart(2, 0)).join(':');
   return [open, close].map(getTime).join('-');

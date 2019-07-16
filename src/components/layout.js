@@ -7,11 +7,19 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql, StaticQuery } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header/header';
 import Footer from './footer';
-// import "./layout.css"
+
+const project = process.env.GATSBY_PROJECT || 'artel';
+
+console.log(`Using project config: '${project}'`);
+if (project === 'ada') {
+  require('../styles/ada.scss');
+} else {
+  require('../styles/artel.scss');
+}
 
 const Layout = ({ children }) => {
   const { site } = useStaticQuery(
