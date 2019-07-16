@@ -19,6 +19,11 @@ const artel = {
     open: [8, 0],
     close: [13, 0],
   },
+  sassVariables: {
+    '$color-main': '#1b4fd2',
+    '$color-main-400': '#537eed',
+    '$color-main-100': '#e8edf9',
+  },
 };
 
 const ada = {
@@ -41,6 +46,11 @@ const ada = {
   workingHoursSaturday: {
     open: [7, 0],
     close: [13, 0],
+  },
+  sassVariables: {
+    '$color-main': '#c43838',
+    '$color-main-400': '#537eed',
+    '$color-main-100': '#f5d4d7',
   },
 };
 

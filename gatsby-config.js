@@ -1,7 +1,12 @@
 const project = process.env.GATSBY_PROJECT || 'artel';
 const siteConfig = require('./siteConfig')[project];
 
+const sassVariablesString = Object.entries(siteConfig.sassVariables)
+  .map(b => `${b.join(': ')};`)
+  .join(' ');
+
 console.log(`Using project config: '${project}'`);
+console.log(sassVariablesString);
 
 module.exports = {
   siteMetadata: {
@@ -10,7 +15,12 @@ module.exports = {
     author: '@totodt',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: sassVariablesString,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
     {

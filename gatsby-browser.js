@@ -6,9 +6,4 @@
 
 // You can delete this file if you're not using it
 
-const project = process.env.GATSBY_PROJECT || 'artel';
-if (project === 'artel') {
-  require('./src/styles/artel.scss');
-} else if (project === 'ada') {
-  require('./src/styles/ada.scss');
-}
+require('./src/styles/main.scss');
