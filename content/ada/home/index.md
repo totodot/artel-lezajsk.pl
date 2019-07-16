@@ -2,7 +2,7 @@
 title: >-
   Nasz sklep zlokalizowany w Leżajsku  jest doskonałym wyborem  dla lokalnych
   klientów.
-image: /assets/ada/26708-unsplash.jpg
+image: /assets/ada/jenn-jpeg-1058224-unsplash.jpg
 ---
 Sformułowanie “po sąsiedzku” najlepiej odzwierciedla atmosferę i pomoc, którą oferujemy przy wyborze potrzebnych artykułów. 
 
