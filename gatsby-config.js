@@ -1,12 +1,12 @@
 const project = process.env.GATSBY_PROJECT || 'artel';
+const siteConfig = require('./siteConfig')[project];
 
 console.log(`Using project config: '${project}'`);
 
 module.exports = {
   siteMetadata: {
-    title: 'Sklep Elektryczny Artel - Lezajsk',
-    description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    title: siteConfig.name,
+    description: siteConfig.description,
     author: '@totodt',
   },
   plugins: [
@@ -77,14 +77,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Sklep Elektryczny Artel - Leżajsk',
-        short_name: 'Artel',
+        name: siteConfig.name,
+        short_name: siteConfig.shortName,
         start_url: '/',
-        background_color: '#1b4fd2',
-        theme_color: '#1b4fd2',
+        background_color: siteConfig.color,
+        theme_color: siteConfig.color,
         display: 'minimal-ui',
         // TODO: change fav icon
-        icon: 'src/images/logo-mark.svg',
+        icon: siteConfig.icon,
         crossOrigin: 'use-credentials',
       },
     },

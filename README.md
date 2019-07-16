@@ -1,6 +1,10 @@
 #ARTEL
 
-## develop
+```bash
+GATSBY_PROJECT=artel gatsby develop --host=0.0.0.0
 ```
-gatsby develop
+
+#ADA
+```
+GATSBY_PROJECT=ada gatsby develop --host=0.0.0.0
 ```
