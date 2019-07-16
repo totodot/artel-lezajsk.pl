@@ -4,12 +4,21 @@ import { Link } from 'gatsby';
 import cx from 'classnames';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
-import Logo from '../../images/logo.inline.svg';
+import ArtelLogo from '../../images/artel-logo.inline.svg';
+import AdaLogo from '../../images/ada-logo.inline.svg';
+
 import Hamburger from './hamburger';
 import pathsMap from '../../../pathsMap';
 
+const logoMap = {
+  artel: ArtelLogo,
+  ada: AdaLogo,
+};
+
 const Header = ({ siteTitle }) => {
+  const project = process.env.GATSBY_PROJECT || 'artel';
   const [isHamburgerOpen, setHamburgerOpen] = useState(false);
+  const Logo = logoMap[project];
   useEffect(() => {
     if (isHamburgerOpen) {
       disableBodyScroll();
@@ -50,7 +59,13 @@ const Header = ({ siteTitle }) => {
             <div className="header__hamburger">
               <Hamburger onChange={toogleHamburger} isOpen={isHamburgerOpen} />
             </div>
-            <div className="header__logo">
+            <div
+              className={cx({
+                header__logo: true,
+                header__logo_ada: project === 'ada',
+                header__logo_artel: project === 'artel',
+              })}
+            >
               <Link to="/">
                 <Logo />
               </Link>
@@ -75,7 +90,11 @@ const Header = ({ siteTitle }) => {
         <ul className="mobile-nav__list">
           {menuLinks.map(({ name, link }) => (
             <li className="mobile-nav__item" key={name}>
-              <Link to={link} className="mobile-nav__link" activeClassName="mobile-nav__link_active">
+              <Link
+                to={link}
+                className="mobile-nav__link"
+                activeClassName="mobile-nav__link_active"
+              >
                 {name}
               </Link>
             </li>

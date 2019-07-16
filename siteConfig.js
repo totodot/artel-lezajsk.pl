@@ -5,7 +5,7 @@ const artel = {
   description:
     'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
   color: '#1b4fd2',
-  icon: 'src/images/logo-mark.svg',
+  icon: 'src/images/artel-fav.png',
   street: 'Żwirki i Wigury 9',
   postCode: '37-300',
   city: 'Leżajsk',
@@ -33,7 +33,7 @@ const ada = {
   description:
     'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
   color: '#c43838',
-  icon: 'src/images/logo-mark.svg',
+  icon: 'src/images/ada-fav.svg',
   street: 'Kasprowicza 2',
   postCode: '37-100',
   city: 'Łańcut',

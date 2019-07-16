@@ -24,11 +24,19 @@
   }
 
   &__logo {
-    width: 110px;
     line-height: 0;
+    &_ada{
+      width: 180px;
+      @media (min-width: $md) {
+        width: 210px;
+      }
+    }
 
-    @media (min-width: $md) {
+    &_artel{
       width: 150px;
+      @media (min-width: $md) {
+        width: 200px;
+      }
     }
   }
 
