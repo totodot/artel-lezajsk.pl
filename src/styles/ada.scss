@@ -8,4 +8,10 @@ $color-secondary-100: #f0f0f0;
 
 $color-white: #fff;
 
-@import "./main.scss";
+* {
+  color: $color-main;
+}
+a {
+  color: blue;
+}
+// @import "./main.scss";

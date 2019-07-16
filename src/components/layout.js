@@ -12,15 +12,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header/header';
 import Footer from './footer';
 
-const project = process.env.GATSBY_PROJECT || 'artel';
-
-console.log(`Using project config: '${project}'`);
-if (project === 'ada') {
-  require('../styles/ada.scss');
-} else {
-  require('../styles/artel.scss');
-}
-
 const Layout = ({ children }) => {
   const { site } = useStaticQuery(
     graphql`
