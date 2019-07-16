@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import CircleArrow from '../circleArrow/circleArrow';
 import Clock from '../../images/icons/clock.inline.svg';
 
-import './newsBox.scss';
 import CustomImage from '../image/image';
 
 const NewsBox = ({

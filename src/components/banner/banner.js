@@ -8,8 +8,6 @@ import SvgLightning from '../../images/icons/lightning.inline.svg';
 
 import ImgBulb from '../../images/bulb.png';
 
-import './banner.scss';
-
 const Banner = () => (
   <div className="banner">
     <div className="banner__circles">

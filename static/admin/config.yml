@@ -1,4 +1,4 @@
-media_folder: static/assets
+media_folder: static/assets/ada
 public_folder: /assets
 
 slug:
@@ -9,7 +9,7 @@ slug:
 collections:
   - name: news
     label: News
-    folder: content/news
+    folder: content/ada/news
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -20,7 +20,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: offer
     label: Offer
-    folder: content/offer
+    folder: content/ada/offer
     create: true
     slug: "{{slug}}"
     fields:
@@ -35,7 +35,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: promotions
     label: Promotions
-    folder: content/promotions
+    folder: content/ada/promotions
     create: true
     slug: "{{slug}}"
     fields:
@@ -49,31 +49,21 @@ collections:
           options: ["newPrice", "percentage"],
           default: "newPrice",
         }
-      - {
-          name: oldPrice,
-          label: Old Price,
-          widget: number,
-          valueType: float,
-        }
-      - {
-          name: newPrice,
-          label: New Price,
-          widget: number,
-          valueType: float,
-        }
+      - { name: oldPrice, label: Old Price, widget: number, valueType: float }
+      - { name: newPrice, label: New Price, widget: number, valueType: float }
       - { name: percentage, label: Percentage, widget: number, valueType: int }
       - { name: body, label: Body, widget: markdown }
 
   - name: pages
     label: Pages
     files:
-      - file: content/about/index.md
+      - file: content/ada/about/index.md
         label: About
         name: about
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
-      - file: content/home/index.md
+      - file: content/ada/home/index.md
         label: Home
         name: home
         fields:

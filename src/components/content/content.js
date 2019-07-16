@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import './content.scss';
 
 export const HTMLContent = ({ content, className }) => (
   <div className={cx(className, 'html-content')} dangerouslySetInnerHTML={{ __html: content }} />

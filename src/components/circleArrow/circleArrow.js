@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import ArrowRightIcon from '../../images/icons/arrow-right.inline.svg';
-import './circleArrow.scss';
 
 const CircleArrow = ({ link }) => {
   const body = (

@@ -5,4 +5,12 @@
  */
 
 // You can delete this file if you're not using it
-import "./src/styles/main.scss";
+
+const project = process.env.GATSBY_PROJECT || 'artel';
+if (project === 'artel') {
+  require('./src/styles/artel.scss');
+}
+
+if (project === 'ada') {
+  require('./src/styles/ada.scss');
+}

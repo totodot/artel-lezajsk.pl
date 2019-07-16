@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './whyBox.scss';
 
 import BulbIcon from '../../images/icons/whyus_bulb.inline.svg';
 import HomeIcon from '../../images/icons/whyus_home.inline.svg';

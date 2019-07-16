@@ -61,8 +61,8 @@ const GalleryPage = ({ data }) => {
 export default GalleryPage;
 
 export const pageQuery = graphql`
-  query GalleryQuery {
-    images: allFile(filter: { absolutePath: { regex: "/(content/gallery/images)/.*/" } }) {
+  query GalleryQuery($galleryRegex: String!) {
+    images: allFile(filter: { absolutePath: { regex: $galleryRegex } }) {
       edges {
         node {
           publicURL

@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'gatsby-image';
 import cx from 'classnames';
 
-import './image.scss';
-
 const CustomImage = ({ image, asBackground, height }) => {
   const style = {
     ...(asBackground

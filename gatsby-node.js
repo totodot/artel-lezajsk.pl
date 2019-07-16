@@ -3,6 +3,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const pathsMap = require('./pathsMap');
 
+const project = process.env.GATSBY_PROJECT || 'artel';
 const getTranslatedPath = (path) => {
   const [, module, ...rest] = path.split('/');
   const translatedModule = pathsMap[module];
@@ -67,8 +68,15 @@ exports.onCreateDevServer = ({ app }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions;
 
-  const newPage = { ...page };
-  newPage.path = getTranslatedPath(page.path);
+  const newPage = {
+    ...page,
+    path: getTranslatedPath(page.path),
+    context: {
+      ...page.context,
+      project,
+      galleryRegex: `/(content/${project}/gallery/images)/.*/`,
+    },
+  };
   deletePage(page);
   createPage(newPage);
 };

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CustomImage from '../image/image';
 
-import './promotionBox.scss';
-
 const PromotionBox = React.memo(({
   link, title, image, type, percentage, oldPrice, newPrice,
 }) => (

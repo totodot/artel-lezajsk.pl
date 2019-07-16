@@ -1,14 +1,29 @@
 @import "./grid.css";
-@import "./spacing.scss";
-@import "./svg-colors.scss";
 @import "./reset.scss";
 @import "./variables.scss";
-@import "./header.scss";
-@import "./nav.scss";
+@import "./svg-colors.scss";
+@import "./spacing.scss";
+
+//Pages
+
 @import "./home.scss";
-@import "./hamburger.scss";
-@import "./footer.scss";
 @import "./news.scss";
+
+//components
+
+@import "../components/banner/banner.scss";
+@import "../components/circleArrow/circleArrow.scss";
+@import "../components/content/content.scss";
+@import "../components/footer/footer.scss";
+@import "../components/header/header.scss";
+@import "../components/header/hamburger.scss";
+@import "../components/header/nav.scss";
+@import "../components/image/image.scss";
+@import "../components/newsBox/newsBox.scss";
+@import "../components/offerBox/offerBox.scss";
+@import "../components/promotionBox/promotionBox.scss";
+@import "../components/slider/slider.scss";
+@import "../components/whyBox/whyBox.scss";
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";

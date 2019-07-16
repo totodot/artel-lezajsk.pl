@@ -1,16 +1,6 @@
 $header-height-mobile: 70px;
 $header-height-desktop: 105px;
 
-$color-main: #1b4fd2;
-$color-main-400: #537eed;
-$color-main-100: #e8edf9;
-
-$color-secondary: #2b3345;
-$color-secondary-400: #6e7c91;
-$color-secondary-100: #f0f0f0;
-
-$color-white: #fff;
-
 $xs: 0;
 $sm: 576px;
 $md: 768px;
@@ -18,6 +8,7 @@ $lg: 992px;
 $xl: 1200px;
 
 $shadow: 0px 40px 60px -60px black;
+
 @mixin box-shadow {
   position: relative;
   margin-bottom: 5rem;

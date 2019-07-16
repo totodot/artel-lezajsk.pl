@@ -1,9 +1,13 @@
+const project = process.env.GATSBY_PROJECT || 'artel';
+
+console.log(`Using project config: '${project}'`);
+
 module.exports = {
   siteMetadata: {
-    title: 'Sklep Elektryczny Artel Łańcut',
+    title: 'Sklep Elektryczny Artel - Lezajsk',
     description:
       'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-    author: '@gatsbyjs',
+    author: '@totodt',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -36,20 +40,13 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: `${__dirname}/static/assets`,
+        path: `${__dirname}/static/assets/${project}`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data`,
-        name: 'data',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content/${project}`,
         name: 'markdown-pages',
       },
     },
@@ -97,14 +94,11 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/init.js`, // Or another path if you don't want to create /src/cms/init.js
         enableIdentityWidget: true,
         publicPath: 'admin',
-        htmlTitle: 'Content Manager',
+        htmlTitle: 'Admin panel',
         manualInit: true,
       },
     },
 
     // 'gatsby-plugin-netlify-identity-widget',
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ],
 };
