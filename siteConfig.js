@@ -40,7 +40,7 @@ const ada = {
   },
   workingHoursSaturday: {
     open: [7, 0],
-    close: [13, 12],
+    close: [13, 0],
   },
 };
 
