@@ -33,7 +33,7 @@ const GalleryPage = ({ data }) => {
   };
   return (
     <Layout>
-      <SEO title="Galeria zdjęć" />
+      <SEO title="Galeria zdjęć" description="Galeria zdjęć: Zdjęcia prezentujące niektóre z naszych produktów." />
       <div className="container">
         <h1 className="heading_h1">Galeria</h1>
         <div className="m-b-xxl">
@@ -68,7 +68,7 @@ export const pageQuery = graphql`
           publicURL
           id
           childImageSharp {
-            fluid(quality: 100) {
+            fluid {
               ...GatsbyImageSharpFluid
               originalImg
             }

@@ -40,3 +40,13 @@
   margin-top: -145px;
   margin-bottom: 50px;
 }
+
+.offer {
+  &__categories {
+    list-style: decimal-leading-zero;
+    margin: 2em;
+    font-weight: 600;
+    line-height: 1.4em;
+    font-size: 1.8rem;
+  }
+}

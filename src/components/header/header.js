@@ -46,10 +46,10 @@ const Header = ({ siteTitle }) => {
       name: 'oferta',
       link: `/${pathsMap.offer}`,
     },
-    {
-      name: 'kontakt',
-      link: `/${pathsMap.contact}`,
-    },
+    // {
+    //   name: 'kontakt',
+    //   link: `/${pathsMap.contact}`,
+    // },
   ];
   return (
     <>

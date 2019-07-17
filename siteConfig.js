@@ -24,6 +24,7 @@ const artel = {
     '$color-main-400': '#537eed',
     '$color-main-100': '#e8edf9',
   },
+  keywords: ['Artel', 'artykuły elektryczne'],
 };
 
 const ada = {
@@ -52,6 +53,7 @@ const ada = {
     '$color-main-400': '#537eed',
     '$color-main-100': '#f5d4d7',
   },
+  keywords: ['ElektroAda', 'artykuły elektryczne'],
 };
 
 module.exports = {

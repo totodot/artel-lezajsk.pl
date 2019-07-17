@@ -17,24 +17,24 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...formState,
-      }),
-    })
-      .then(() => {
-        navigate(`/${pathsMap.success}`);
-      })
-      .catch(error => alert(error));
+    // e.preventDefault();
+    // const form = e.target;
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({
+    //     'form-name': form.getAttribute('name'),
+    //     ...formState,
+    //   }),
+    // })
+    //   .then(() => {
+    //     navigate(`/${pathsMap.success}`);
+    //   })
+    //   .catch(error => alert(error));
   };
   return (
     <Layout>
-      <SEO title="Kontakt" />
+      <SEO title="Kontakt" description="Strona informacyjna: Jesteśmy firmą z dużym doświadczeniem na rynku. Pomożemy Ci w wyborze oświetlenia w również oświetlenia LED" />
       <div className="container">
         <h1 className="heading_h1">Kontakt</h1>
         <div className="row">

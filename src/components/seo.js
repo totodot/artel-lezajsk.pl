@@ -1,14 +1,11 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import siteConfig from '../../siteConfig';
+
+const project = process.env.GATSBY_PROJECT || 'artel';
+const projectConfig = siteConfig[project];
 
 function SEO({
   description, lang, meta, keywords, title,
@@ -28,7 +25,7 @@ function SEO({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-
+  const newKeywords = [...keywords, ...projectConfig.keywords];
   return (
     <Helmet
       htmlAttributes={{
@@ -71,10 +68,10 @@ function SEO({
         },
       ]
         .concat(
-          keywords.length > 0
+          newKeywords.length > 0
             ? {
               name: 'keywords',
-              content: keywords.join(', '),
+              content: newKeywords.join(', '),
             }
             : [],
         )

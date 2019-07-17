@@ -38,7 +38,7 @@ const IndexPage = React.memo(({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Strona główna" keywords={['gatsby', 'application', 'react']} />
+      <SEO title="Strona główna" keywords={['sklep elektryczny', 'żarówki', 'oświetlenie led', 'części agd']} />
       <Banner />
 
       <section className="section section_dark">

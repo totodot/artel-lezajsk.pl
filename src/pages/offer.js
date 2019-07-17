@@ -9,7 +9,7 @@ const Offer = ({ data }) => {
   const { offer } = data;
   return (
     <Layout>
-      <SEO title="Oferta" />
+      <SEO title="Oferta" description="Oferta produktów - oświetlenie, ledy, gniadzka, przewody."/>
       <div className="container">
         <h1 className="heading_h1">Oferta</h1>
         <div className="row">

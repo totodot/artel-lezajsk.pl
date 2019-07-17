@@ -6,7 +6,7 @@ import NewsBox from '../components/newsBox/newsBox';
 
 const News = ({ data: { news } }) => (
   <Layout>
-    <SEO title="Aktualności " />
+    <SEO title="Aktualności" description="Aktualności: Najświeższe informację związane z życiem firmy. Nowi producenci artykułów elektrycznych oraz oświetlenia dostępni w naszym asortymencie." />
     <div className="container">
       <h1 className="heading_h1">Aktualności</h1>
       <div className="row">
