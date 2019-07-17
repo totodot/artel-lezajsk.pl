@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     <div className="container">
       <h1 className="heading_h1">Nie znaleziono strony</h1>
       <Link to="/">
-        <button className="m-t-xl m-b-xl" type="button">
+        <button className="button m-t-xl m-b-xl" type="button">
           Przejdź do strony głównej
         </button>
       </Link>
