@@ -1,17 +1,15 @@
-const project = process.env.GATSBY_PROJECT || 'artel';
-const siteConfig = require('./siteConfig')[project];
+const { config, project } = require('./siteConfig');
 
-const sassVariablesString = Object.entries(siteConfig.sassVariables)
+console.log(`Using project config: '${project}'`);
+
+const sassVariablesString = Object.entries(config.sassVariables)
   .map(b => `${b.join(': ')};`)
   .join(' ');
 
-console.log(`Using project config: '${project}'`);
-console.log(sassVariablesString);
-
 module.exports = {
   siteMetadata: {
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: config.name,
+    description: config.description,
     author: '@totodt',
   },
   plugins: [
@@ -87,14 +85,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: siteConfig.name,
-        short_name: siteConfig.shortName,
+        name: config.name,
+        short_name: config.shortName,
         start_url: '/',
-        background_color: siteConfig.color,
-        theme_color: siteConfig.color,
+        background_color: config.color,
+        theme_color: config.color,
         display: 'minimal-ui',
         // TODO: change fav icon
-        icon: siteConfig.icon,
+        icon: config.icon,
         crossOrigin: 'use-credentials',
       },
     },

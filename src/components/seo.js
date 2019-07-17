@@ -2,10 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import siteConfig from '../../siteConfig';
-
-const project = process.env.GATSBY_PROJECT || 'artel';
-const projectConfig = siteConfig[project];
+import { config } from '../../siteConfig';
 
 function SEO({
   description, lang, meta, keywords, title,
@@ -25,7 +22,7 @@ function SEO({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const newKeywords = [...keywords, ...projectConfig.keywords];
+  const newKeywords = [...keywords, ...config.keywords];
   return (
     <Helmet
       htmlAttributes={{

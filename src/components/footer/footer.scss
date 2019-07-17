@@ -59,6 +59,7 @@ $map-height-sm: 250px;
   }
   &__map-container {
     height: $map-height-sm;
+    overflow: hidden;
 
     @media (min-width: $md) {
       height: 100%;
