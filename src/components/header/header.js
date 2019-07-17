@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import cx from 'classnames';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
+import {project} from '../../../siteConfig';
 import ArtelLogo from '../../images/artel-logo.inline.svg';
 import AdaLogo from '../../images/ada-logo.inline.svg';
 
@@ -16,7 +17,6 @@ const logoMap = {
 };
 
 const Header = ({ siteTitle }) => {
-  const project = process.env.GATSBY_PROJECT || 'artel';
   const [isHamburgerOpen, setHamburgerOpen] = useState(false);
   const Logo = logoMap[project];
   useEffect(() => {

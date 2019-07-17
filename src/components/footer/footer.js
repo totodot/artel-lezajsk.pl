@@ -1,10 +1,9 @@
 import React from 'react';
-import Map from './googleMap';
+// import Map from './googleMap';
 import PhoneSvg from '../../images/icons/phone.inline.svg';
 import EnvelopeSvg from '../../images/icons/envelope.inline.svg';
-import siteConfig from '../../../siteConfig';
+import { config } from '../../../siteConfig';
 
-const config = siteConfig[process.env.GATSBY_PROJECT || 'artel'];
 const getOpeningTime = ({ open, close }) => {
   const getTime = times => times.map(time => time.toString().padStart(2, 0)).join(':');
   return [open, close].map(getTime).join('-');
@@ -62,13 +61,21 @@ const Footer = () => (
           </div>
         </div>
         <div className="col-12 col-md-6 p-none footer__map-col">
-          <Map
+          {/* <Map
             isMarkerShown
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div style={{ height: '100%' }} />}
             containerElement={<div className="footer__map-container" />}
             mapElement={<div className="footer__map-element" />}
-          />
+          /> */}
+          <div className="footer__map-container">
+            <iframe
+              className="footer__map-element"
+              src={config.googleMapsIframe}
+              frameBorder="0"
+              allowFullScreen
+            />
+          </div>
         </div>
       </div>
     </div>

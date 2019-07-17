@@ -1,7 +1,6 @@
 import CMS from 'netlify-cms-app';
 import FileSystemBackend from 'netlify-cms-backend-fs';
-
-const project = process.env.GATSBY_PROJECT || 'artel';
+import { project } from '../../siteConfig';
 
 const config = {};
 if (process.env.NODE_ENV === 'development') {
