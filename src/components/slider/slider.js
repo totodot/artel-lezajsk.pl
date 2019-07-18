@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-
 import PropTypes from 'prop-types';
 
-const SimpleSlider = ({
-  children, items, itemsPerSlide, options,
-}) => {
+const SimpleSlider = ({ children, items, itemsPerSlide }) => {
+  const [isRender, setRender] = useState(false);
+  useEffect(() => {
+    setRender(true);
+  }, []);
   const slidesToShow = Math.min(...[itemsPerSlide, items]);
   const getValueForResponsive = a => Math.min(...[a, slidesToShow]);
   const settings = {
@@ -16,34 +17,33 @@ const SimpleSlider = ({
     slidesToScroll: 1,
     arrows: false,
     dotsClass: 'slider__dots',
-    ...options,
     responsive: [
       {
         breakpoint: 992,
         settings: {
           slidesToShow: getValueForResponsive(3),
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: getValueForResponsive(2),
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: getValueForResponsive(1),
-          slidesToScroll: 1,
         },
       },
     ],
   };
+
   return (
     <div className="slider">
-      <Slider {...settings}>{children}</Slider>
+      <Slider key={`slider-${isRender ? 'before' : 'after'}`} {...settings}>
+        {children}
+      </Slider>
     </div>
   );
 };

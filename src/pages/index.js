@@ -31,25 +31,20 @@ const whyBoxes = [
 
 const IndexPage = React.memo(({ data }) => {
   const { news, home, promotions } = data;
-  const promotionsSliderOptions = {
-    autoplay: false,
-    autoplaySpeed: 5000,
-  };
 
   return (
     <Layout>
-      <SEO title="Strona główna" keywords={['sklep elektryczny', 'żarówki', 'oświetlenie led', 'części agd']} />
+      <SEO
+        title="Strona główna"
+        keywords={['sklep elektryczny', 'żarówki', 'oświetlenie led', 'części agd']}
+      />
       <Banner />
 
       <section className="section section_dark">
         <div className="container">
           {!!promotions.edges.length && (
             <div className="promotions-slider">
-              <SimpleSlider
-                itemsPerSlide={4}
-                items={promotions.edges.length}
-                options={promotionsSliderOptions}
-              >
+              <SimpleSlider itemsPerSlide={4} items={promotions.edges.length}>
                 {promotions.edges.map(({ node }) => (
                   <PromotionBox key={node.id} link={node.fields.slug} {...node.frontmatter} />
                 ))}
