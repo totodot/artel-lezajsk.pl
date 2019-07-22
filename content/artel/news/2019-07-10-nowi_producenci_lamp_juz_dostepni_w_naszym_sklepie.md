@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 date: 2019-07-10T12:57:53.057Z
 title: Nowi producenci lamp  juz dostępni w naszym  sklepie!
 image: /assets/artel/michael-browning-227688-unsplash.jpg
