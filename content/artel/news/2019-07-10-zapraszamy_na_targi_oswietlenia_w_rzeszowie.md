@@ -1,7 +1,9 @@
 ---
-published: false
+published: true
 date: 2019-07-10T12:58:31.636Z
-title: 'Zapraszamy na targi  oświetlenia w Rzeszowie '
-image: /assets/artel/photo-1468497513706-9f67b6b86ad4.jpg
+title: Nowa Seria Kinkietów Kanlux-Mileno - już dostępna w naszym sklepie
+image: /assets/artel/kanlux_mileno.jpg
 ---
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, nam provident dolor neque quasi, aliquid quas tempore obcaecati velit accusantium enim quia amet fugit ullam distinctio eum iusto quisquam alias iure tempora a inventore asperiores. Libero deserunt, voluptate est, veniam dolorum enim perspiciatis magni mollitia error corporis, sint sit dolorem velit itaque beatae consequuntur. Excepturi expedita in quas id aut, et voluptate facilis inventore distinctio laboriosam cumque a harum incidunt iste nemo. Eveniet iure non impedit similique consequatur hic quis pariatur dolorem dolore at, rem obcaecati alias, necessitatibus voluptates, nihil natus expedita quas. Eius nam repellat nisi tempore, itaque accusantium?
+Kanlux MILENO – swoboda wyboru, multum zastosowań
+
+Kanlux MILENO to odpowiedź na najnowsze trendy w oświetleniu dekoracyjnym. Ciekawe wzornictwo i niebanalny, a zarazem klasyczny kształt czynią z tej oprawy ozdobę pomieszczenia. Dużym atutem opraw jest możliwość wyboru ilości punktów świetlnych, i tak na suficie możemy zastosować na przykład model z 4 punktami świetlnymi, na ścianie kinkiet z 1 punktem, a nad lustrem 2 punkty świetlne. Zależnie od potrzeb możemy oświetlać małe lub większe powierzchnie za pomocą całej rodziny tych samych opraw.Kanlux MILENO to dwa zestawy kolorystyczne, do wyboru mamy: wyrazistą czerń ze złotem lub bardziej stonowane, postarzane srebro w zestawieniu z miedzią. Do opraw samodzielnie wybierzesz wymienne źródła światła z trzonkiem GU10.<https://www.kanlux.pl/pl/produkty#views:view=jplist-grid-view|paging:number=25|keyword:value=MILENO|new:value=no|paging:currentPage=0>
