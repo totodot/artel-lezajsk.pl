@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 date: 2019-07-10T12:58:31.636Z
 title: 'Zapraszamy na targi  oświetlenia w Rzeszowie '
 image: /assets/artel/photo-1468497513706-9f67b6b86ad4.jpg
