@@ -1,0 +1,19 @@
+.producer {
+  margin: 1em;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  transition: 0.2s opacity;
+
+  &:hover {
+    opacity: 1;
+  }
+  
+  &__image {
+    max-width: 50%;
+    max-height: 100%;
+    filter: brightness(0);
+  }
+}

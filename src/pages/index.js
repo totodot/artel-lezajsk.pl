@@ -13,6 +13,7 @@ import CustomImage from '../components/image/image';
 import HomeIcon from '../images/icons/home-icon.inline.svg';
 import PromotionBox from '../components/promotionBox/promotionBox';
 import SimpleSlider from '../components/slider/slider';
+import ProducersSlider from '../components/producersSlider/producersSlider';
 
 const whyBoxes = [
   {
@@ -30,8 +31,11 @@ const whyBoxes = [
 ];
 
 const IndexPage = React.memo(({ data }) => {
-  const { news, home, promotions } = data;
-
+  const {
+    news, home, promotions, producers: producersObject,
+  } = data;
+  const { producers } = producersObject;
+  console.log(producers);
   return (
     <Layout>
       <SEO
@@ -67,6 +71,7 @@ const IndexPage = React.memo(({ data }) => {
               </div>
             </div>
           )}
+          <ProducersSlider producers={producers} />
         </div>
       </section>
 
@@ -108,6 +113,13 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
+    producers: producersJson {
+      producers {
+        name
+        image 
+        link 
+      }
+    }
     promotions: allMarkdownRemark(
       filter: {
         frontmatter: { active: { eq: true } },

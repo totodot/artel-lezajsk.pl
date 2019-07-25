@@ -59,6 +59,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/${project}`,
+        name: 'markdown-pages',
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -79,9 +86,9 @@ module.exports = {
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-json',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

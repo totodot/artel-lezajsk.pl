@@ -192,6 +192,36 @@ CMS.init({
               },
             ],
           },
+          {
+            file: `content/${project}/producers/index.json`,
+            label: 'Producers',
+            name: 'producers',
+            extension: 'json',
+            fields: [
+              {
+                label: 'Producers',
+                name: 'producers',
+                widget: 'list',
+                fields: [
+                  {
+                    label: 'Name',
+                    name: 'name',
+                    widget: 'string',
+                  },
+                  {
+                    label: 'Image',
+                    name: 'image',
+                    widget: 'image',
+                  },
+                  {
+                    label: 'Link',
+                    name: 'link',
+                    widget: 'string',
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
     ],
