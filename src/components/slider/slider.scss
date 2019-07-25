@@ -26,4 +26,10 @@
       color: transparent;
     }
   }
+
+  &__arrow {
+    &::before {
+      color: $color-secondary;
+    }
+  }
 }

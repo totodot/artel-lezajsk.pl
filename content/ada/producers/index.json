@@ -1,0 +1,24 @@
+{
+    "producers": [
+        {
+            "name": "Kanlux",
+            "image": "/assets/artel/logo-kanlux.png",
+            "link": "https://www.kanlux.pl"
+        },
+        {
+            "name": "Kontakt Simon",
+            "image": "/assets/artel/logo-kontakt_simon.png",
+            "link": "https://www.kontakt-simon.com.pl/pl/"
+        },
+        {
+            "name": "Sigma",
+            "image": "/assets/artel/logo-sigma.png",
+            "link": "http://sigma-lampy.com.pl/"
+        },
+        {
+            "name": "Osram",
+            "image": "/assets/artel/logo-osram.png",
+            "link": "https://www.osram.pl/cb/"
+        }
+    ]
+}
