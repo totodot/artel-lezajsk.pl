@@ -37,14 +37,14 @@ const SimpleSlider = ({
         breakpoint: 768,
         settings: {
           slidesToShow: getValueForResponsive(2),
-          arrowsOnDesktop: false,
+          arrows: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: getValueForResponsive(1),
-          arrowsOnDesktop: false,
+          arrows: false,
         },
       },
     ],
