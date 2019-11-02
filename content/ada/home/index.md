@@ -1,6 +1,6 @@
 ---
 title: >-
-  Nasz sklep zlokalizowany w Leżajsku  jest doskonałym wyborem  dla lokalnych
+  Nasz sklep zlokalizowany w Łańcucie jest doskonałym wyborem  dla lokalnych
   klientów.
 image: /assets/ada/jenn-jpeg-1058224-unsplash.jpg
 ---
