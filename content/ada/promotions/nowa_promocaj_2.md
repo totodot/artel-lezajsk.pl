@@ -1,6 +1,6 @@
 ---
 title: Przedłużacz blatowy 2X2P+Z 2USB audio
-active: true
+active: false
 image: /assets/ada/group-10.jpg
 type: newPrice
 oldPrice: 182
