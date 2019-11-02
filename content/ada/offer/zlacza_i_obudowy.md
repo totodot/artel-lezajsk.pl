@@ -10,5 +10,5 @@ categories:
   - Złącza pomiarowe
   - Kieszenie kablowe
 ---
-Puszki
 
+Złącza i obudowy

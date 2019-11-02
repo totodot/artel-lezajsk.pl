@@ -4,11 +4,12 @@ image: /assets/ada/thomas-kelley-74096-unsplash.jpg
 categories:
   - Rozdzielnice
   - Zestawy siłowe
-  - 'Gniazda stałe, przenośne, tablicowe'
-  - 'Wtyki odbiornikowe, tablicowe'
+  - Gniazda stałe, przenośne, tablicowe
+  - Wtyki odbiornikowe, tablicowe
   - Wtyki przenośne
   - Rozdzielnie budowlane przenośne
-  - 'Rozgałęźniki, rozdzielacze'
+  - Rozgałęźniki, rozdzielacze
   - Łączniki krzywkowe
 ---
+
 Osprzęt siłowy

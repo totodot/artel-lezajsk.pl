@@ -12,4 +12,5 @@ categories:
   - Instalacyjne S-Box z możliwością montażu szyny TH-35
   - Dekle i pokrywy
 ---
+
 Puszki elektryczne
