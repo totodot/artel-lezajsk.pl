@@ -3,11 +3,7 @@ import React from 'react';
 import PhoneSvg from '../../images/icons/phone.inline.svg';
 import EnvelopeSvg from '../../images/icons/envelope.inline.svg';
 import { config } from '../../../siteConfig';
-
-const getOpeningTime = ({ open, close }) => {
-  const getTime = times => times.map(time => time.toString().padStart(2, 0)).join(':');
-  return [open, close].map(getTime).join('-');
-};
+import WorkingHours from './workingHours';
 
 const Footer = () => (
   <footer className="footer">
@@ -16,48 +12,34 @@ const Footer = () => (
         <div className="col-12 col-md-6">
           <div className="footer__info-container">
             <div className="footer__company-name">{config.shortName}</div>
-            <div className="footer__company-subname">{config.shortDescription}</div>
+            <div className="footer__company-subname">
+              {config.shortDescription}
+            </div>
             <div className="footer__address">
               <div>{config.street}</div>
-              <div>
-                {config.postCode}
-                {' '}
-                {config.city}
-              </div>
+              <div>{`${config.postCode} ${config.city}`}</div>
             </div>
             <div className="footer__contact footer-contact">
-              <a href={`tel:+48 ${config.phone}`} className="footer-contact__item">
+              <a
+                href={`tel:+48 ${config.phone}`}
+                className="footer-contact__item"
+              >
                 <span className="footer-contact__icon">
                   <PhoneSvg />
                 </span>
                 {config.phone}
               </a>
-              <a href={`mailto:${config.email}`} className="footer-contact__item">
+              <a
+                href={`mailto:${config.email}`}
+                className="footer-contact__item"
+              >
                 <span className="footer-contact__icon">
                   <EnvelopeSvg />
                 </span>
                 {config.email}
               </a>
             </div>
-            <div className="working-hours">
-              <div className="working-hours__header">Godziny pracy</div>
-              <div className="working-hours__item">
-                <div className="working-hours__days">pon.-pt.:</div>
-                <div className="working-hours__hours">
-                  {getOpeningTime(config.workingHoursMondayFriday)}
-                </div>
-              </div>
-              <div className="working-hours__item">
-                <div className="working-hours__days">sob.:</div>
-                <div className="working-hours__hours">
-                  {getOpeningTime(config.workingHoursSaturday)}
-                </div>
-              </div>
-              <div className="working-hours__item">
-                <div className="working-hours__days">niedz.:</div>
-                <div className="working-hours__hours">Zamknięte</div>
-              </div>
-            </div>
+            <WorkingHours />
           </div>
         </div>
         <div className="col-12 col-md-6 p-none footer__map-col">
@@ -70,6 +52,7 @@ const Footer = () => (
           /> */}
           <div className="footer__map-container">
             <iframe
+              title="Google Mapa"
               className="footer__map-element"
               src={config.googleMapsIframe}
               frameBorder="0"
@@ -82,7 +65,3 @@ const Footer = () => (
   </footer>
 );
 export default Footer;
-
-// TODO;
-// underline current day (working hours)
-// add info about holidays
