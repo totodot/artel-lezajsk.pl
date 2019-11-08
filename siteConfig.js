@@ -3,7 +3,7 @@ const artel = {
   shortName: 'Artel',
   shortDescription: 'artykuły elektryczne',
   description:
-    'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    'Sklep elektryczny Artel Leżajsk. Znajdziesz u nas materiały elektryczne, żarówki LED i oświetlnie.',
   color: '#1b4fd2',
   icon: 'src/images/artel-fav.png',
   street: 'Żwirki i Wigury 9',
@@ -34,7 +34,7 @@ const ada = {
   shortName: 'Elektro-Ada',
   shortDescription: 'artykuły elektryczne',
   description:
-    'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+  'Elektro-Ada Hurtownia elektryczna Łańcut. Znajdziesz u nas materiały elektryczne, żarówki LED i oświetlnie.',
   color: '#c43838',
   icon: 'src/images/ada-fav.png',
   street: 'Kasprowicza 2',
