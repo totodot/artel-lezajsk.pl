@@ -113,7 +113,10 @@ module.exports = {
         manualInit: true,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: { trackingId: config.googleAnalyticsTrackingId },
+    },
     // 'gatsby-plugin-netlify-identity-widget',
   ],
 };

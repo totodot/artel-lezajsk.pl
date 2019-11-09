@@ -34,7 +34,7 @@ const ada = {
   shortName: 'Elektro-Ada',
   shortDescription: 'artykuły elektryczne',
   description:
-  'Elektro-Ada Hurtownia elektryczna Łańcut. Znajdziesz u nas materiały elektryczne, żarówki LED i oświetlnie.',
+    'Elektro-Ada Hurtownia elektryczna Łańcut. Znajdziesz u nas materiały elektryczne, żarówki LED i oświetlnie.',
   color: '#c43838',
   icon: 'src/images/ada-fav.png',
   street: 'Kasprowicza 2',
@@ -56,6 +56,7 @@ const ada = {
     '$color-main-100': '#f5d4d7',
   },
   keywords: ['ElektroAda', 'artykuły elektryczne'],
+  googleAnalyticsTrackingId: 'UA-151949465-1',
   googleMapsIframe:
     'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10241.196312293123!2d22.2360935!3d50.0806871!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe6e83db9fee5e8e!2sElektro-Ada+sc+Hurtownia+elektryczna%2C+instalacje+elektryczne%2C+%C5%BCar%C3%B3wki+LED+ta%C5%9Bmy%2C+oprawy+o%C5%9Bwietlenie!5e0!3m2!1spl!2spl!4v1563365133648!5m2!1spl!2spl',
 };
