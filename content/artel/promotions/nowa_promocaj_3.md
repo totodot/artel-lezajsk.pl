@@ -1,6 +1,6 @@
 ---
 title: Lampa wisząca  Loft
-active: true
+active: false
 image: /assets/artel/group-11.jpg
 type: newPrice
 oldPrice: 799
