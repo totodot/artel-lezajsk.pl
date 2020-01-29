@@ -1,6 +1,6 @@
 ---
 title: Lampy stojące
-active: true
+active: false
 image: /assets/artel/group-11.jpg
 type: percentage
 oldPrice: 143
