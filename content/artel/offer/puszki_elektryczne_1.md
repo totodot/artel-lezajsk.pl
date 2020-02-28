@@ -1,9 +1,13 @@
 ---
-title: Puszki elektryczne
-image: /assets/artel/photo-1468497513706-9f67b6b86ad4.jpg
+title: Puszki podtynkowe
+image: /assets/artel/puszka_simet.jpg
 categories:
-  - Puszki A
-  - Puszki B
-  - Puszki C
+  - Do tynku
+  - Do pustych ścian
+  - Kinkietowe
+  - Odgromowe
+  - Do złączenia do ramek wielokrotnych
+  - 'Do elektroniki z dodatkową kieszenią, np. żeby schować zasilacz itp.'
+  - Przeciwogniowe do wysokich temperatur
 ---
-Puszki elektryczne
+Puszki elektryczne do wszelkich zastosowań
