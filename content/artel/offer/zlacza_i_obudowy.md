@@ -1,6 +1,6 @@
 ---
 title: Złącza i obudowy
-image: /assets/artel/michael-browning-227688-unsplash.jpg
+image: /assets/artel/skrzynki_pelmet.png
 categories:
   - Złącza licznikowe
   - Fundamenty
@@ -8,7 +8,6 @@ categories:
   - Złącza p.poż
   - Szafy kablowe
   - Złącza pomiarowe
-  - Kieszenie kablowe
 ---
-Puszki
+
 
