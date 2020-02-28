@@ -1,15 +1,12 @@
 ---
-title: Puszki elektryczne
-image: /assets/artel/american-public-power-association-430853-unsplash.jpg
+title: Puszki elektryczne natynkowe
+image: /assets/artel/puszka_natynkowa.jpg
 categories:
-  - Puszki podtynkowe połączeniowe oraz szeregowe
-  - Oświetlenie Led
-  - Test
-  - Natynkowe
-  - Hermetyczne
-  - Puszki złącza odgromowego
-  - Do płyt gipsowych
-  - Instalacyjne S-Box z możliwością montażu szyny TH-35
-  - Dekle i pokrywy
+  - Puszki natynkowe połączeniowe
+  - Puszki w systemie S-BOX do zamocowań na szynie TH
+  - Puszki z zaciskami oraz puste
+  - Puszki hermetyczne
+  - Puszki z dławicami lub bez
+  - 'Różne stopnie szczelności - IP20, IP44, IP55, IP66'
 ---
-Puszki elektryczne
+Puszki elektryczne do zastosowań natynkowych
