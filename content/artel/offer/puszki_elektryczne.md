@@ -1,5 +1,5 @@
 ---
-title: Puszki elektryczne natynkowe
+title: Puszki natynkowe
 image: /assets/artel/puszka_natynkowa.jpg
 categories:
   - Puszki natynkowe połączeniowe
