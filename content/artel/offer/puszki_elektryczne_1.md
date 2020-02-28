@@ -1,6 +1,6 @@
 ---
 title: Puszki podtynkowe
-image: /assets/artel/puszka_simet.jpg
+image: /assets/artel/puszka_simet_2.jpg
 categories:
   - Do tynku
   - Do pustych ścian
