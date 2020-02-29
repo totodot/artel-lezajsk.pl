@@ -8,7 +8,7 @@ Miło nam poinformować Was o możliwości zakupu w naszym sklepie Nowoczesnych 
 
 CO ZYSKUJESZ?
 
-*Lepszą cenę niż na Internecie
-*Bezpieczne zakupy na miejscu
-*Brak ryzyka otrzymania uszkodzonego towaru
-*Nasze doradztwo
+* _Lepszą cenę niż na Internecie_
+* _Bezpieczne zakupy na miejscu_
+* _Brak ryzyka otrzymania uszkodzonego towaru_
+* _Nasze doradztwo_
