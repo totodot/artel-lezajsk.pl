@@ -25,6 +25,7 @@ const artel = {
     '$color-main-100': '#e8edf9',
   },
   keywords: ['Artel', 'artykuły elektryczne'],
+  googleAnalyticsTrackingId: 'UA-151949465-2',
   googleMapsIframe:
     'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2550.98897196123!2d22.41987610898439!3d50.25479025753151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc67800d51f8cac32!2sSklep+Elektryczny+ARTEL+Aleksander+Le%C5%84czyk!5e0!3m2!1spl!2spl!4v1563364405359!5m2!1spl!2spl',
 };
