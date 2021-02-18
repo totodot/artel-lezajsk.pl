@@ -1,6 +1,6 @@
 ---
 title: 'Przewód NKT YdyP 3x1,5'
-active: true
+active: false
 image: /assets/artel/promocja_przewody_2.jpg
 type: newPrice
 oldPrice: 220
